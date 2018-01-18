@@ -11,7 +11,5 @@
   "scripts": {
     "start": "browser-sync start --server --files 'css/*.css'"
   },
-  "devDependencies": {
-    "browser-sync-webpack-plugin": "^1.2.0"
-  }
+  "devDependencies": {}
 }
