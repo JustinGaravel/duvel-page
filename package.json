@@ -1,0 +1,17 @@
+{
+  "name": "duvel-page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Justin Garavel",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.23.5",
+    "html5-boilerplate": "^6.0.1"
+  },
+  "scripts": {
+    "start": "browser-sync start --server --files 'css/*.css'"
+  },
+  "devDependencies": {
+    "browser-sync-webpack-plugin": "^1.2.0"
+  }
+}
