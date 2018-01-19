@@ -99,7 +99,14 @@ textarea {
    .section {
     height: 100vh;
   }
+  a { 
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+  }
 
+  a:hover {
+    text-decoration: #999;
+  }
   p { font-size: 1.2rem; }
   h1 { font-size: 2rem; }
   h2 { font-size: 1.5rem; }
@@ -129,6 +136,10 @@ li {
 .content-container {
   max-width: 1000px;
   margin: auto;
+}
+
+#placeholder-img {
+  width: 100%;
 }
 
    /* ==========================================================================

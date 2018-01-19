@@ -12,7 +12,7 @@
     <!-- Place favicon.ico in the root directory -->
 
     <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
@@ -25,9 +25,9 @@
     <div class="header">
       <h1>Duvel Header</h1>
       <ul>
-        <li><a href="#the-beer">The Beer</a></li>
-        <li><a href="#celebrating-mastery">Celebrating Mastery</a></li>
-        <li><a href="#since-1871">Since 1871</a></li>
+        <li><a onclick="toTheBeer()">The Beer</a></li>
+        <li><a onclick="toCelebratingMastery()">Celebrating Mastery</a></li>
+        <li><a onclick="toSince1871()">Since 1871</a></li>
       </ul>
     </div>
     
@@ -45,7 +45,7 @@
           qui officia deserunt mollit anim id est laborum."</p>
         </div>
         <div class="beer-section__image">
-            <img src="assets/placeholder.png" alt="placeholder">
+            <img src="assets/placeholder.png" id="placeholder-img" alt="placeholder">
         </div>
       </div>
   
