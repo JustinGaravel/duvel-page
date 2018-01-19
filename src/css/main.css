@@ -100,12 +100,31 @@ textarea {
 
 .header {
     width: 100vw;
+    height: 150px;
     top: 0;
     position: fixed;
     padding: 10px 16px;
     background: #efefef;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
 }
 
+/* Used ot properly offset anchor links when using sticky header */
+.anchor {
+  display: block;
+  height: 150px; /* height of the header */
+  margin-top: -150px;
+  visibility: hidden;
+}
+
+body {
+  margin-top: 150px;
+}
+
+li {
+  display: inline;
+}
 .footer {
     background: #efefef;
 }
