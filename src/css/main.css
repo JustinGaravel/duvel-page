@@ -96,21 +96,19 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+   .section {
+    height: 100vh;
+  }
 
+  p { font-size: 1.2rem; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.17rem; }
+  h4 { font-size: 1.12rem; }
+  h5 { font-size: .83rem; }
+  h6 { font-size: .75rem; }  
 
-.header {
-    width: 100vw;
-    height: 150px;
-    top: 0;
-    position: fixed;
-    padding: 10px 16px;
-    background: #efefef;
-    display: flex;
-    justify-content: flex-start;
-    margin: 0 auto;
-}
-
-/* Used ot properly offset anchor links when using sticky header */
+  /* Used ot properly offset anchor links when using sticky header */
 .anchor {
   display: block;
   height: 150px; /* height of the header */
@@ -119,19 +117,58 @@ textarea {
 }
 
 body {
+  font-size: 62.5%;
   margin-top: 150px;
+  font-family: Teko, sans-serif;
 }
 
 li {
   display: inline;
 }
-.footer {
-    background: #efefef;
+
+.content-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+   /* ==========================================================================
+                        Header Section
+   ========================================================================== */
+
+.header {
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  position: fixed;
+  padding: 10px 16px;
+  background: #efefef;
+  display: flex;
+}
+
+.section {
+  margin: 0 3.6rem;
+}
+/* ==========================================================================
+   Beer Section
+   ========================================================================== */
+.beer-section {
+  display: flex;
+}
+.beer-section__text {
+  flex: 1;
+}
+
+.beer-section__image-container {
+  flex: 1;
 }
 
 
-.section {
-  height: 100vh;
+/* ==========================================================================
+   Footer Section
+   ========================================================================== */
+.footer {
+    background: #efefef;
 }
 
 
