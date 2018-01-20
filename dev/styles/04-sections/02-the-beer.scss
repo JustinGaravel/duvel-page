@@ -3,21 +3,27 @@
 /* ************************************************** */
 
 .beer-section {
-  padding: 3rem 0;
   display: flex;
+  align-items: center;
+  // justify-content: center;
   height: 90vh;
   border-bottom: 1px solid black;
 }
 .beer-section__text-container {
-  padding: 1rem;
   flex: 1;
+  border-right: 2rem solid transparent;
+
 }
 
 .beer-section__image-container {
-  padding: 1rem;
   flex: 1;
+  border-left: 2rem solid transparent;
+
 }
 
+.beer-section__image {
+  display: block;
+}
 
 /* Mobile Styling */
 @media (max-width: 768px) {

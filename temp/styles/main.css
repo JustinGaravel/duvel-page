@@ -142,7 +142,7 @@ body {
 }
 
 .content-container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -318,6 +318,7 @@ body {
   width: 100%;
   overflow: hidden;
   top: 0;
+  left: 0;
   position: fixed;
   padding: 10px 16px;
   background: #efefef;
@@ -339,6 +340,11 @@ body {
   display: inline;
 }
 
+.navi ul {
+  position: absolute;
+  bottom: 1rem;
+}
+
 /* Mobile Styling */
 @media (max-width: 768px) {
   .navi {
@@ -356,26 +362,32 @@ body {
 /* The Beer Styles */
 /* ************************************************** */
 .beer-section {
-  padding: 3rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 90vh;
   border-bottom: 1px solid black;
 }
 
 .beer-section__text-container {
-  padding: 1rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  border-right: 2rem solid transparent;
 }
 
 .beer-section__image-container {
-  padding: 1rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  border-left: 2rem solid transparent;
+}
+
+.beer-section__image {
+  display: block;
 }
 
 /* Mobile Styling */
