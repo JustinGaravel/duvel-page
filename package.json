@@ -4,12 +4,29 @@
   "main": "index.js",
   "author": "Justin Garavel",
   "license": "MIT",
-  "dependencies": {
-    "browser-sync": "^2.23.5",
-    "html5-boilerplate": "^6.0.1"
-  },
+  "dependencies": {},
   "scripts": {
-    "start": "browser-sync start --s --f ['*/index.html', 'js/*.js' 'css/*.css'] --ss './src'"
+    "start": "browser-sync start --s --f ['*/index.html', 'js/*.js' 'css/*.css'] --ss './src'",
+    "serve": "gulp serve",
+    "sass": "gulp sass"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.23.5",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-eslint": "^4.0.1",
+    "gulp-html": "^0.4.7",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-stylelint": "^6.0.0",
+    "gulp-uglify": "^3.0.0"
+  }
 }
