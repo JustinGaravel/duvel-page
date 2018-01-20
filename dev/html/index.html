@@ -3,14 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Duvel New Beer Page</title>
+    <title>New Duvel Beer</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
-    <!-- Place favicon.ico in the root directory -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
@@ -18,10 +17,11 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
     <div class="navi">
       <div class="navi__logo-container">
-          <img class="navi__logo" src="img/duvel_logo.png" alt="duvel logo">
+        <a onclick="toTheBeer()">
+            <img class="navi__logo" src="img/duvel_logo.png" alt="duvel logo">
+        </a>
       </div>
       <div class="navi__links-container">
         <ul>
@@ -45,26 +45,52 @@
           ugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
           qui officia deserunt mollit anim id est laborum."</p>
         </div>
-        <div class="beer-section__image-container">
+        <div class="beer-section__img-container">
             <img src="img/placeholder.png" id="placeholder-img" alt="placeholder">
         </div>
       </div>
   
       <span id="celebrating-mastery" class="anchor"></span>
-      <div id="mastery-section" class="section middle-section">
-        <h1>Mastery Section Header</h1>
+      <div id="mastery-section" class="section mastery-section__container">
+        <h1>Mastery in Beer</h1>
         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-            ugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-            qui officia deserunt mollit anim id est laborum."
+            incididunt ut labore et dolore magna aliqua."
         </p>
+        <div class="mastery-section__img-container mastery-section__img-container--left">
+          <h1>Devilish Passion</h1>
+          <p>Placeholder text goes here.</p>
+          <img src="img/illustration_passion.png" class="mastery-section__img">
+          <button class="mastery-section__btn">More →</button>
+        </div>
+        <div class="mastery-section__img-container mastery-section__img-container--right">
+          <h1>Devilish Tenacity</h1>
+          <p>Placeholder text goes here.</p>
+          <img src="img/illustration_tenacity.png" class="mastery-section__img">
+        </div>
+        <div class="mastery-section__img-container mastery-section__img-container--left">
+          <h1>Heavenly Pioneering</h1>
+          <p>Placeholder text goes here.</p>
+          <img src="img/illustration_pioneering.png" class="mastery-section__img">
+        </div>
+        <div class="mastery-section__img-container mastery-section__img-container--right">
+          <h1>Heavenly Patience</h1>
+          <p>Placeholder text goes here.</p>
+          <img src="img/illustration_patience.png" class="mastery-section__img">
+        </div>
+        <div class="mastery-section__img-container mastery-section__img-container--left">
+          <h1>Heavenly Ritual</h1>
+          <p>Placeholder text goes here.</p>
+          <img src="img/illustration_ritual.png" class="mastery-section__img">
+        </div>
+        <div class="mastery-section__img-container mastery-section__img-container--right">
+          <h1>Devilish Details</h1>
+          <p>Placeholder text goes here.</p>
+          <img src="img/illustration_details.png" class="mastery-section__img">
+        </div>
       </div>
   
       <span id="since-1871" class="anchor"></span>
       <div id="since-section" class="section since-section">
-        <h1>Since Section Header</h1>
         <div class="since-section__video-container">
           <iframe width="560" height="315"
             class="since-section__video"
@@ -74,9 +100,41 @@
             allowfullscreen>
           </iframe>
         </div>
-        
       </div>
   
+      <div class="instagram-section">
+        <h3>
+          <i class="fa fa-instagram"></i> @DUVEL_BELGIUM
+        </h3>
+        <div class="instagram-section__img-box">
+          <div class="instagram-section__img-container">
+            <a href="https://www.instagram.com/p/Bd-eU--AsPt/?taken-by=duvel_belgium">
+              <img src="img/insta_1.jpg" class="instagram-section__img">
+            </a>
+          </div>
+          <div class="instagram-section__img-container">
+            <a href="https://www.instagram.com/p/BdVTqCPgxiE/?taken-by=duvel_belgium">
+              <img src="img/insta_2.jpg" class="instagram-section__img">
+            </a>
+          </div>
+          <div class="instagram-section__img-container">
+            <a href="https://www.instagram.com/p/BdSh8_CgpvJ/?taken-by=duvel_belgium">
+              <img src="img/insta_3.jpg" class="instagram-section__img">
+            </a>
+          </div>
+          <div class="instagram-section__img-container">
+            <a href="https://www.instagram.com/p/BdDaz2DgwYk/?taken-by=duvel_belgium">
+              <img src="img/insta_4.jpg" class="instagram-section__img">
+            </a>
+          </div>
+          <div class="instagram-section__img-container">
+            <a href="https://www.instagram.com/p/BcespHdA_L7/?taken-by=duvel_belgium">
+              <img src="img/insta_5.jpg" class="instagram-section__img">
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div class="footer">
         Duvel Copyright Duvel Moortgat
       </div>

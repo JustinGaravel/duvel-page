@@ -86,11 +86,7 @@ textarea {
   color: #000;
   padding: 0.2em 0;
 }
-.section {
-  margin: 0 auto;
-  padding: 1rem;
-  height: 90vh;
-}
+
 a { 
   font-size: 1.5rem;
   margin-left: 1.5rem;
@@ -100,7 +96,8 @@ a:hover {
   text-decoration: #999;
 }
 h1,h2,h3,h4,h5,h6 {
-  color: red;
+  color: $duvel-red;
+  text-transform: uppercase;
 }
 p { font-size: 1.2rem; }
 h1 { font-size: 2rem; }
@@ -124,14 +121,9 @@ margin-top: 150px;
 font-family: Teko, sans-serif;
 }
 
-
 .content-container {
 max-width: 1200px;
-margin: auto;
-}
-
-#placeholder-img {
-width: 100%;
+margin: 0 auto;
 }
 
 /* ==========================================================================

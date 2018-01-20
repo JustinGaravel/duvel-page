@@ -5,24 +5,19 @@
 .beer-section {
   display: flex;
   align-items: center;
-  // justify-content: center;
   height: 90vh;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid #efefef;
 }
+
 .beer-section__text-container {
   flex: 1;
   border-right: 2rem solid transparent;
-
 }
 
-.beer-section__image-container {
+.beer-section__img-container {
   flex: 1;
   border-left: 2rem solid transparent;
 
-}
-
-.beer-section__image {
-  display: block;
 }
 
 /* Mobile Styling */

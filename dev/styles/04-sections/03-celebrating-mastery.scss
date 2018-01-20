@@ -1,1 +1,58 @@
+/* ************************************************** */
+/* Celebrating Mastery Styles */
+/* ************************************************** */
+
+.mastery-section__img-container h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+}
+
+.mastery-section__container {
+  padding-top: 3.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.mastery-section__img-container {
+  background: $light-grey;
+  margin: 1rem;
+  align-items: center;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid $light-grey;
+  border-radius: 2px;
+}
+.mastery-section__img-container--left {
+  align-self: flex-start;
+}
+
+.mastery-section__img-container--right {
+  align-self: flex-end;
+  margin-top: -20vh;
+}
+
+.mastery-section__btn {
+  border-radius: 6px;
+  color: #fff;
+  background: $duvel-red;
+  align-self: flex-end;
+  font-size: 1.2rem;
+  padding: 5px 12px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.mastery-section__btn:hover {
+  opacity: .4;
+  transition: 500ms all;
+}
+.mastery-section__img {
+  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  max-width:100%;
+  max-height:100%;
+}
 
