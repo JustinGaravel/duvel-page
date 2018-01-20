@@ -1,3 +1,18 @@
+@import "01-variables/index";
+
+@import "02-fonts/index";
+
+@import "03-sections/01-header";
+@import "03-sections/02-the-beer";
+@import "03-sections/03-celebrating-mastery";
+@import "03-sections/04-since-1871";
+@import "03-sections/05-footer";
+
+
+
+
+
+
 /* ************************************************** */
 /* Base Styles */
 /* ************************************************** */
@@ -83,9 +98,10 @@ textarea {
     color: #000;
     padding: 0.2em 0;
 }
-
-   .section {
-    height: 100vh;
+  .section {
+    margin: 0 auto;
+    padding: 1rem;
+    height: 90vh;
   }
   a { 
     font-size: 1.5rem;
@@ -94,6 +110,9 @@ textarea {
 
   a:hover {
     text-decoration: #999;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    color: red;
   }
   p { font-size: 1.2rem; }
   h1 { font-size: 2rem; }
@@ -106,7 +125,7 @@ textarea {
   /* Used ot properly offset anchor links when using sticky header */
 .anchor {
   display: block;
-  height: 150px; /* height of the header */
+  height: $header-height;
   margin-top: -150px;
   visibility: hidden;
 }
@@ -129,55 +148,6 @@ li {
 #placeholder-img {
   width: 100%;
 }
-
-/* ************************************************** */
-/* Header Styles */
-/* ************************************************** */
-
-.header {
-  height: 150px;
-  width: 100%;
-  overflow: hidden;
-  top: 0;
-  position: fixed;
-  padding: 10px 16px;
-  background: #efefef;
-  display: flex;
-}
-
-.section {
-  margin: 0 3.6rem;
-}
-/* ************************************************** */
-/* The Beer Styles */
-/* ************************************************** */
-.beer-section {
-  display: flex;
-}
-.beer-section__text {
-  flex: 1;
-}
-
-.beer-section__image-container {
-  flex: 1;
-}
-
-
-/* ************************************************** */
-/* Footer Styles */
-/* ************************************************** */
-.footer {
-    background: #efefef;
-}
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    Helper classes

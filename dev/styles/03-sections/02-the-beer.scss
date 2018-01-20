@@ -1,0 +1,18 @@
+
+/* ************************************************** */
+/* The Beer Styles */
+/* ************************************************** */
+
+.beer-section {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.beer-section__text-container {
+  padding: 1rem;
+  flex: 1;
+}
+
+.beer-section__image-container {
+  padding: 1rem;
+  flex: 1;
+}
