@@ -1,7 +1,9 @@
+
+
+
 /* ************************************************** */
 /* Base Styles */
 /* ************************************************** */
-@import url("https://fonts.googleapis.com/css?family=Teko");
 html {
   color: #222;
   font-size: 1em;
@@ -17,6 +19,7 @@ html {
 *
 * Customize the background color to match your design.
 */
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -30,6 +33,7 @@ html {
 /*
 * A better looking default horizontal rule
 */
+
 hr {
   display: block;
   height: 1px;
@@ -44,6 +48,7 @@ hr {
 * images, videos and the bottom of their containers:
 * https://github.com/h5bp/html5-boilerplate/issues/440
 */
+
 audio,
 canvas,
 iframe,
@@ -56,6 +61,7 @@ video {
 /*
 * Remove default fieldset styles.
 */
+
 fieldset {
   border: 0;
   margin: 0;
@@ -65,6 +71,7 @@ fieldset {
 /*
 * Allow only vertical resizing of textareas.
 */
+
 textarea {
   resize: vertical;
 }
@@ -72,90 +79,69 @@ textarea {
 /* ==========================================================================
  Browser Upgrade Prompt
  ========================================================================== */
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
 }
-
 .section {
   margin: 0 auto;
   padding: 1rem;
   height: 90vh;
 }
-
-a {
+a { 
   font-size: 1.5rem;
   margin-left: 1.5rem;
 }
 
 a:hover {
-  -webkit-text-decoration: #999;
-          text-decoration: #999;
+  text-decoration: #999;
 }
-
-h1, h2, h3, h4, h5, h6 {
+h1,h2,h3,h4,h5,h6 {
   color: red;
 }
-
-p {
-  font-size: 1.2rem;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-h3 {
-  font-size: 1.17rem;
-}
-
-h4 {
-  font-size: 1.12rem;
-}
-
-h5 {
-  font-size: .83rem;
-}
-
-h6 {
-  font-size: .75rem;
-}
+p { font-size: 1.2rem; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.17rem; }
+h4 { font-size: 1.12rem; }
+h5 { font-size: .83rem; }
+h6 { font-size: .75rem; }  
 
 /* Used to properly offset anchor links when using sticky header */
 .anchor {
-  display: block;
-  height: 12vh;
-  margin-top: -150px;
-  visibility: hidden;
+display: block;
+height: $navi-height;
+margin-top: -150px;
+visibility: hidden;
 }
 
 body {
-  font-size: 62.5%;
-  margin-top: 150px;
-  font-family: Teko, sans-serif;
+font-size: 62.5%;
+margin-top: 150px;
+font-family: Teko, sans-serif;
 }
 
+
 .content-container {
-  max-width: 1000px;
-  margin: auto;
+max-width: 1000px;
+margin: auto;
 }
 
 #placeholder-img {
-  width: 100%;
+width: 100%;
 }
 
 /* ==========================================================================
  Helper classes
  ========================================================================== */
+
 /*
 * Hide visually and from screen readers
 */
+
 .hidden {
   display: none !important;
 }
@@ -168,6 +154,7 @@ body {
 *    causes content to wrap 1 word per line:
 *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
 */
+
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -179,8 +166,7 @@ body {
   padding: 0;
   position: absolute;
   width: 1px;
-  white-space: nowrap;
-  /* 1 */
+  white-space: nowrap; /* 1 */
 }
 
 /*
@@ -188,6 +174,7 @@ body {
 * to be focusable when navigated to via the keyboard:
 * https://www.drupal.org/node/897638
 */
+
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -204,6 +191,7 @@ body {
 /*
 * Hide visually and from screen readers, but maintain layout
 */
+
 .invisible {
   visibility: hidden;
 }
@@ -219,12 +207,11 @@ body {
 * 2. The use of `table` rather than `block` is only necessary if using
 *    `:before` to contain the top-margins of child elements.
 */
+
 .clearfix:before,
 .clearfix:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
 
 .clearfix:after {
@@ -236,11 +223,15 @@ body {
  These examples override the primary ('mobile first') styles.
  Modify as content requires.
  ========================================================================== */
+
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 }
 
-@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+@media print,
+     (-webkit-min-device-pixel-ratio: 1.25),
+     (min-resolution: 1.25dppx),
+     (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -249,164 +240,73 @@ body {
  Inlined to avoid the additional HTTP request:
  http://www.phpied.com/delay-loading-your-print-css/
  ========================================================================== */
+
 @media print {
   *,
   *:before,
   *:after {
-    background: transparent !important;
-    color: #000 !important;
-    /* Black prints faster:
+      background: transparent !important;
+      color: #000 !important; /* Black prints faster:
                                  http://www.sanbeiji.com/archives/953 */
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
-    text-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
   }
+
   a,
   a:visited {
-    text-decoration: underline;
+      text-decoration: underline;
   }
+
   a[href]:after {
-    content: " (" attr(href) ")";
+      content: " (" attr(href) ")";
   }
+
   abbr[title]:after {
-    content: " (" attr(title) ")";
+      content: " (" attr(title) ")";
   }
+
   /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
+
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
-    content: "";
+      content: "";
   }
+
   pre {
-    white-space: pre-wrap !important;
+      white-space: pre-wrap !important;
   }
   pre,
   blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
+      border: 1px solid #999;
+      page-break-inside: avoid;
   }
+
   /*
    * Printing Tables:
    * http://css-discuss.incutio.com/wiki/Printing_Tables
    */
+
   thead {
-    display: table-header-group;
+      display: table-header-group;
   }
+
   tr,
   img {
-    page-break-inside: avoid;
+      page-break-inside: avoid;
   }
+
   p,
   h2,
   h3 {
-    orphans: 3;
-    widows: 3;
+      orphans: 3;
+      widows: 3;
   }
+
   h2,
   h3 {
-    page-break-after: avoid;
+      page-break-after: avoid;
   }
-}
-
-/* ************************************************** */
-/* Navigation Styles */
-/* ************************************************** */
-.navi {
-  min-height: 12vh;
-  width: 100%;
-  overflow: hidden;
-  top: 0;
-  position: fixed;
-  padding: 10px 16px;
-  background: #efefef;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
-}
-
-.navi__logo {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-flex-shrink: 0;
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.navi li {
-  display: inline;
-}
-
-/* Mobile Styling */
-@media (max-width: 768px) {
-  .navi {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .navi li {
-    display: block;
-  }
-}
-
-/* ************************************************** */
-/* The Beer Styles */
-/* ************************************************** */
-.beer-section {
-  padding: 3rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 90vh;
-  border-bottom: 1px solid black;
-}
-
-.beer-section__text-container {
-  padding: 1rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.beer-section__image-container {
-  padding: 1rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-/* Mobile Styling */
-@media (max-width: 768px) {
-  .beer-section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-/* ************************************************** */
-/* Since 1871 Styles */
-/* ************************************************** */
-.since-section {
-  width: 100%;
-  background: #f5f5f5;
-}
-
-.since-section__video-container {
-  padding: 0 3.6rem;
-}
-
-.since-section__video {
-  width: 100%;
-}
-
-/* ************************************************** */
-/* Footer Styles */
-/* ************************************************** */
-.footer {
-  background: #efefef;
 }

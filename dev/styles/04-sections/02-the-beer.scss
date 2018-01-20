@@ -1,10 +1,11 @@
-
 /* ************************************************** */
 /* The Beer Styles */
 /* ************************************************** */
 
 .beer-section {
+  padding: 3rem 0;
   display: flex;
+  height: 90vh;
   border-bottom: 1px solid black;
 }
 .beer-section__text-container {
@@ -15,4 +16,12 @@
 .beer-section__image-container {
   padding: 1rem;
   flex: 1;
+}
+
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+  .beer-section {
+    flex-direction: column;
+  }
 }
