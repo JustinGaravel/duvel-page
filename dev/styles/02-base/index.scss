@@ -1,90 +1,21 @@
-
-
-
 /* ************************************************** */
-/* Base Styles */
+/*                    Base Styles                     */
 /* ************************************************** */
+
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
 }
 
-/*
-* Remove text-shadow in selection highlight:
-* https://twitter.com/miketaylr/status/12228805301
-*
-* Vendor-prefixed and regular ::selection selectors cannot be combined:
-* https://stackoverflow.com/a/16982510/7133471
-*
-* Customize the background color to match your design.
-*/
-
 ::-moz-selection {
-  background: #b3d4fc;
+  background: $duvel-tan;
   text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
+  background: $duvel-tan;
   text-shadow: none;
-}
-
-/*
-* A better looking default horizontal rule
-*/
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-/*
-* Remove the gap between audio, canvas, iframes,
-* images, videos and the bottom of their containers:
-* https://github.com/h5bp/html5-boilerplate/issues/440
-*/
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/*
-* Remove default fieldset styles.
-*/
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/*
-* Allow only vertical resizing of textareas.
-*/
-
-textarea {
-  resize: vertical;
-}
-
-/* ==========================================================================
- Browser Upgrade Prompt
- ========================================================================== */
-
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
 }
 
 a { 
@@ -94,6 +25,7 @@ a {
 a:hover {
   text-decoration: #999;
 }
+
 h1,h2,h3,h4,h5,h6 {
   color: $duvel-red;
   text-transform: uppercase;
@@ -113,18 +45,19 @@ h6 { font-size: 1rem; }
     font-size: 3.2rem;
     margin: 0;
   }
-
+  
   h2 {
     font-size: 2.6rem;
     margin: 0;
     }
 }
+
 /* Used to properly offset anchor links when using sticky header */
 .anchor {
-display: block;
-height: $navi-height;
-margin-top: -150px;
-visibility: hidden;
+  display: block;
+  height: $navi-height;
+  margin-top: -$navi-height;
+  visibility: hidden;
 }
 
 body {
@@ -132,11 +65,6 @@ body {
   margin-top: 150px;
   font-family: Teko, sans-serif;
 }
-
-// .content-container {
-//   max-width: 1200px;
-//   margin: 0 auto;
-// }
 
 .lines-container {
   position: absolute;
@@ -369,4 +297,69 @@ img {
   h3 {
       page-break-after: avoid;
   }
+}
+
+/* SFX */
+/* Forward */
+.hvr-forward {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-forward:hover, .hvr-forward:focus, .hvr-forward:active {
+  -webkit-transform: translateX(8px);
+  transform: translateX(8px);
+}
+
+/* Grow Rotate */
+.hvr-grow-rotate {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow-rotate:hover, .hvr-grow-rotate:focus, .hvr-grow-rotate:active {
+  -webkit-transform: scale(1.1) rotate(4deg);
+  transform: scale(1.1) rotate(4deg);
+}
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: $duvel-red;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
 }

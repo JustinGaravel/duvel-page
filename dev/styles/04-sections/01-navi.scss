@@ -15,9 +15,6 @@
   z-index: 2;
 }
 
-.navi__logo-container {
-}
-
 .navi__logo {
   flex-shrink: 0;
   max-width: 100%;
@@ -29,6 +26,7 @@
 }
 
 .navi li {
+  cursor: pointer;
   display: inline;
   margin-left: 2.4rem;
 }
@@ -43,22 +41,20 @@
   .navi {
     align-items: center;
     justify-content: center;
-    // flex-direction: column;
     width: 100%;
     padding: 0;
   }
+  
   .navi li {
     display: block;
     margin-left: 0;
   }
 
-  .navi ul li a {
-    // font-size: 3rem;
-  }
   .navi ul {
     padding-left: 0;
     position: static;
   }
+
   .navi__links-container {
     padding-left: 2rem;
   }

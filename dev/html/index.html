@@ -13,10 +13,6 @@
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-    <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-    <![endif]-->
-
     <div class="navi">
       <div class="navi__logo-container">
         <a onclick="toTheBeer()">
@@ -25,13 +21,12 @@
       </div>
       <div class="navi__links-container">
         <ul class="uppercase">
-          <li><a onclick="toTheBeer()">The Beer</a></li>
-          <li><a onclick="toCelebratingMastery()">Celebrating Mastery</a></li>
-          <li><a onclick="toSince1871()">Since 1871</a></li>
+          <li class="hvr-underline-from-center"><a onclick="toTheBeer()">The Beer</a></li>
+          <li class="hvr-underline-from-center"><a onclick="toCelebratingMastery()">Celebrating Mastery</a></li>
+          <li class="hvr-underline-from-center"><a onclick="toSince1871()">Since 1871</a></li>
         </ul>
       </div>
     </div>
-    
     <div class="content-container">
       <!-- Beer Section -->
       <span id="the-beer" class="anchor"></span>
@@ -75,7 +70,7 @@
           <p>Placeholder text goes here.</p>
           <img src="img/illustration_passion.png" class="mastery__img">
           <div class="mastery__btn-container">
-            <button class="mastery__btn">More →</button>
+            <button class="hvr-forward mastery__btn">More →</button>
           </div>
         </div>
         <div class="mastery__img-container mastery__img-container--right">
@@ -83,7 +78,7 @@
           <p>Placeholder text goes here.</p>
           <img src="img/illustration_tenacity.png" class="mastery__img">
           <div class="mastery__btn-container">
-            <button class="mastery__btn">More →</button>
+            <button class="hvr-forward mastery__btn">More →</button>
           </div>
         </div>
         <div class="mastery__img-container mastery__img-container--left">
@@ -91,7 +86,7 @@
           <p>Placeholder text goes here.</p>
           <img src="img/illustration_pioneering.png" class="mastery__img">
           <div class="mastery__btn-container">
-            <button class="mastery__btn">More →</button>
+            <button class="hvr-forward mastery__btn">More →</button>
           </div>
         </div>
         <div class="lines-container lines-container--left">
@@ -102,7 +97,7 @@
           <p>Placeholder text goes here.</p>
           <img src="img/illustration_patience.png" class="mastery__img">
           <div class="mastery__btn-container">
-            <button class="mastery__btn">More →</button>
+            <button class="hvr-forward hvr-forward mastery__btn">More →</button>
           </div>
         </div>
         <div class="mastery__img-container mastery__img-container--left">
@@ -110,7 +105,7 @@
           <p>Placeholder text goes here.</p>
           <img src="img/illustration_ritual.png" class="mastery__img">
           <div class="mastery__btn-container">
-            <button class="mastery__btn">More →</button>
+            <button class="hvr-forward mastery__btn">More →</button>
           </div>
         </div>
         <div class="mastery__img-container mastery__img-container--right">
@@ -118,7 +113,7 @@
           <p>Placeholder text goes here.</p>
           <img src="img/illustration_details.png" class="mastery__img">
           <div class="mastery__btn-container">
-            <button class="mastery__btn">More →</button>
+            <button class="hvr-forward mastery__btn">More →</button>
           </div>
         </div>
       </div>
@@ -142,34 +137,33 @@
         </div>
       </div>
   
-
       <!-- Instagram Section -->
       <div class="instagram-section section">
         <h2>
           <i class="fa fa-instagram"></i> @Duvel_Belgium
         </h2>
         <div class="instagram-section__img-box">
-          <div class="instagram-section__img-container">
+          <div class="hvr-grow-rotate instagram-section__img-container">
             <a href="https://www.instagram.com/p/Bd-eU--AsPt/?taken-by=duvel_belgium">
               <img src="img/insta_1.jpg" class="instagram-section__img">
             </a>
           </div>
-          <div class="instagram-section__img-container">
+          <div class="hvr-grow-rotate instagram-section__img-container">
             <a href="https://www.instagram.com/p/BdVTqCPgxiE/?taken-by=duvel_belgium">
               <img src="img/insta_2.jpg" class="instagram-section__img">
             </a>
           </div>
-          <div class="instagram-section__img-container">
+          <div class="hvr-grow-rotate instagram-section__img-container">
             <a href="https://www.instagram.com/p/BdSh8_CgpvJ/?taken-by=duvel_belgium">
               <img src="img/insta_3.jpg" class="instagram-section__img">
             </a>
           </div>
-          <div class="instagram-section__img-container">
+          <div class="hvr-grow-rotate instagram-section__img-container">
             <a href="https://www.instagram.com/p/BdDaz2DgwYk/?taken-by=duvel_belgium">
               <img src="img/insta_4.jpg" class="instagram-section__img">
             </a>
           </div>
-          <div class="instagram-section__img-container">
+          <div class="hvr-grow-rotate instagram-section__img-container">
             <a href="https://www.instagram.com/p/BcespHdA_L7/?taken-by=duvel_belgium">
               <img src="img/insta_5.jpg" class="instagram-section__img">
             </a>
@@ -186,11 +180,8 @@
         </div>
       </div>
     </div>
-    
-
+  
     <script src="scripts/app.js" defer></script>
-
-
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
     window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
@@ -198,4 +189,5 @@
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
   </body>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 </html>

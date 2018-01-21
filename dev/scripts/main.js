@@ -1,4 +1,3 @@
-console.log('main.js loaded...');
 
 function toTheBeer() {
   document.querySelector('#the-beer').scrollIntoView({ 

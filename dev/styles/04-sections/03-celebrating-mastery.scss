@@ -7,18 +7,17 @@
 }
 
 .mastery__container {
-  padding-top: 3.6rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  // border-bottom: 2px solid $light-grey;
   padding-bottom: $navi-height;
+  padding-top: 3.6rem;
   margin: auto;
 }
 
 .mastery__h1 {
-  margin-bottom: .5rem;
   line-height: calc(.8em + .2vh);
+  margin-bottom: .5rem;
 }
 
 .mastery__h2 {
@@ -31,14 +30,14 @@
 }
 
 .mastery__img-container {
-  background: $light-grey;
   align-items: center;
-  width: 40%;
+  background: $light-grey;
+  border-radius: 2px;
   display: flex;
   flex-direction: column;
-  border-radius: 2px;
-  padding-top: 2rem;
   margin-top: -20vh;
+  padding-top: 2rem;
+  width: 40%;
 }
 
 .mastery__img-container--left {
@@ -55,31 +54,33 @@
 }
 .mastery__btn-container {
   display: inline;
+  left: 160px;
   position: relative;
   top: 15px;
-  left: 160px;
 }
 .mastery__btn {
+  background: $duvel-red;
+  border: none;
   border-radius: 2px;
   color: #fff;
-  background: $duvel-red;
+  cursor: pointer;
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: 1.2rem;
   padding: 6px 12px;
-  font-family: 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
   text-align: center;
-  border: none;
 }
 
 .mastery__btn:hover {
-  opacity: .4;
-  transition: 500ms all;
+  transition: 400ms all;
+  // background: $duvel-tan;
+  // color: #000;
 }
 .mastery__img {
   flex-shrink: 0;
   -webkit-flex-shrink: 0;
-  max-width:100%;
-  max-height:100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 /* Tablet Styling */
@@ -90,9 +91,9 @@
     width: 75%;
   }
   .mastery__btn {
+    align-self: center;
     height: 6vh;
     width: 13vh;
-    align-self: center;
   }
 
   .mastery__btn-container {
@@ -101,8 +102,8 @@
   }
 
   .mastery__img-container {
-    margin-top: 4rem;
     align-self: center;
+    margin-top: 4rem;
     width: 100%;
   }
 }
@@ -114,7 +115,13 @@
     width: 90%;
   }
   .mastery__btn-container {
-    left: 0;
     top: 20px;
+  }
+}
+
+/* iPhone 5 Styling */
+@media (max-width: $s-mobile-breakpoint) {
+  .mastery__btn {
+    font-size: 12px;
   }
 }
