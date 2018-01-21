@@ -12,7 +12,7 @@
 .instagram-section__img-box {
   margin-top: 2rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-flow: row wrap;
 }
 .instagram-section__img-container {
@@ -22,12 +22,13 @@
 }
 
 .instagram-section__img {
-  max-width: 200px;
+  max-width: 250px;
 }
 
 /* Mobile Styling */
 @media (max-width: $mobile-breakpoint) {
   .instagram-section__img-box {
     flex-direction: column;
+    align-items: center;
   }
 }
