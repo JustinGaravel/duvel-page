@@ -22,6 +22,7 @@
 .mastery__h2--red {
   color: $duvel-red;
 }
+
 .mastery__img-container {
   background: $light-grey;
   align-items: center;
@@ -31,7 +32,6 @@
   border: 2px solid $light-grey;
   border-radius: 2px;
   margin-top: -20vh;
-
 }
 .mastery__img-container--left {
   align-self: flex-start;
@@ -74,3 +74,17 @@
   max-height:100%;
 }
 
+/* Mobile Styling */
+@media (max-width: $mobile-breakpoint) {
+  .mastery__container {
+    flex-direction: column;
+  }
+  .mastery__btn {
+    // visibility: hidden;
+    display: none;
+  }
+  .mastery__img-container {
+    width: 100%;
+    margin-top: 1vh;
+  }
+}

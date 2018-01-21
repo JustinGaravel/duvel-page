@@ -135,6 +135,13 @@ body {
   width: 6vw;
 }
 
+/* Mobile Styling */
+@media (max-width: 768px) {
+  .lines-container img {
+    background: pink;
+  }
+}
+
 .lines-container--left {
   left: 0;
   max-width: 15px;

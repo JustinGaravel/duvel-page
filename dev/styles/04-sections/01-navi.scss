@@ -39,19 +39,27 @@
 }
 
 /* Mobile Styling */
-@media (max-width: 768px) {
+@media (max-width: $mobile-breakpoint) {
   .navi {
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    // flex-direction: column;
     width: 100%;
+    padding: 0;
   }
   .navi li {
     display: block;
     margin-left: 0;
   }
 
+  .navi ul li a {
+    font-size: 3rem;
+  }
   .navi ul {
     padding-left: 0;
     position: static;
+  }
+  .navi__links-container {
+    padding-left: 2rem;
   }
 }

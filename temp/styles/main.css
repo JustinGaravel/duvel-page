@@ -583,6 +583,13 @@ body {
   width: 6vw;
 }
 
+/* Mobile Styling */
+@media (max-width: 768px) {
+  .lines-container img {
+    background: pink;
+  }
+}
+
 .lines-container--left {
   left: 0;
   max-width: 15px;
@@ -804,24 +811,30 @@ body {
 }
 
 /* Mobile Styling */
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .navi {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
+    padding: 0;
   }
   .navi li {
     display: block;
     margin-left: 0;
   }
+  .navi ul li a {
+    font-size: 3rem;
+  }
   .navi ul {
     padding-left: 0;
     position: static;
+  }
+  .navi__links-container {
+    padding-left: 2rem;
   }
 }
 
@@ -851,15 +864,25 @@ body {
       -ms-flex: 1;
           flex: 1;
   border-left: 2rem solid transparent;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  max-width: 100%;
+}
+
+.beer__h1 {
+  line-height: calc(.8em + .2vh);
 }
 
 /* Mobile Styling */
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .beer-section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .beer__img-container {
+    width: 100%;
   }
 }
 
@@ -961,6 +984,23 @@ body {
   max-height: 100%;
 }
 
+/* Mobile Styling */
+@media (max-width: 425px) {
+  .mastery__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mastery__btn {
+    display: none;
+  }
+  .mastery__img-container {
+    width: 100%;
+    margin-top: 1vh;
+  }
+}
+
 /* ************************************************** */
 /* Since 1871 Styles */
 /* ************************************************** */
@@ -1025,7 +1065,7 @@ body {
 }
 
 /* Mobile Styling */
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .instagram-section__img-box {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

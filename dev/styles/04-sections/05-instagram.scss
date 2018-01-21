@@ -26,7 +26,7 @@
 }
 
 /* Mobile Styling */
-@media (max-width: 768px) {
+@media (max-width: $mobile-breakpoint) {
   .instagram-section__img-box {
     flex-direction: column;
   }

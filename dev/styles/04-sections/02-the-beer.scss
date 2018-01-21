@@ -17,11 +17,24 @@
 .beer__img-container {
   flex: 1;
   border-left: 2rem solid transparent;
+  flex-shrink: 1;
+  max-width: 100%;
+}
+
+.beer__h1 {
+  line-height: calc(.8em + .2vh);
+}
+
+.beer__img {
+
 }
 
 /* Mobile Styling */
-@media (max-width: 768px) {
+@media (max-width: $mobile-breakpoint) {
   .beer-section {
     flex-direction: column;
+  }
+  .beer__img-container {
+    width: 100%;
   }
 }
