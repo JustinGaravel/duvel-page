@@ -2,19 +2,25 @@
 /* Celebrating Mastery Styles */
 /* ************************************************** */
 
-.mastery-section__img-container h1,h2,h3,h4,h5,h6,p {
+.mastery__img-container h1,h2,h3,h4,h5,h6,p {
   margin: 0;
 }
 
-.mastery-section__container {
+.mastery__container {
   padding-top: 3.6rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
 }
 
-.mastery-section__img-container {
+.mastery__h2 {
+  color: #000;
+}
+
+.mastery__h2--red {
+  color: $duvel-red;
+}
+.mastery__img-container {
   background: $light-grey;
   margin: 1rem;
   align-items: center;
@@ -24,32 +30,38 @@
   border: 2px solid $light-grey;
   border-radius: 2px;
 }
-.mastery-section__img-container--left {
+.mastery__img-container--left {
   align-self: flex-start;
 }
 
-.mastery-section__img-container--right {
+.mastery__img-container--right {
   align-self: flex-end;
   margin-top: -20vh;
 }
 
-.mastery-section__btn {
+.mastery__btn-container {
+  display: inline-block;
+  position: relative;
+  top: 20px;
+  left: 160px;
+}
+.mastery__btn {
   border-radius: 6px;
   color: #fff;
   background: $duvel-red;
   align-self: flex-end;
   font-size: 1.2rem;
-  padding: 5px 12px;
+  padding: 6px 12px;
   font-family: 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
   text-align: center;
 }
 
-.mastery-section__btn:hover {
+.mastery__btn:hover {
   opacity: .4;
   transition: 500ms all;
 }
-.mastery-section__img {
+.mastery__img {
   flex-shrink: 0;
   -webkit-flex-shrink: 0;
   max-width:100%;

@@ -4,4 +4,19 @@
 
 .footer {
   background: $light-grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.footer__logo {
+  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  width: 5%;
+  height: 5%;
+}
+
+.footer__copyright {
+  font-size: 1.2rem;
 }
