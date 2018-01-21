@@ -520,7 +520,6 @@ textarea {
 
 a {
   font-size: 1.5rem;
-  margin-left: 1.5rem;
 }
 
 a:hover {
@@ -766,7 +765,7 @@ body {
 }
 
 /* ************************************************** */
-/* Navigation Styles */
+/*                 Navigation Styles                  */
 /* ************************************************** */
 .navi {
   min-height: 12vh;
@@ -796,6 +795,7 @@ body {
 
 .navi li {
   display: inline;
+  margin-left: 2.4rem;
 }
 
 .navi ul {
