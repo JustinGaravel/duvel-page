@@ -837,6 +837,10 @@ img {
   max-height: 100%;
 }
 
+.navi__logo--mobile {
+  display: none;
+}
+
 .navi__links-container {
   color: #414141;
 }
@@ -850,6 +854,10 @@ img {
 .navi ul {
   position: absolute;
   bottom: 1rem;
+}
+
+.navi__menu-toggle {
+  display: none;
 }
 
 /* Mobile Styling */

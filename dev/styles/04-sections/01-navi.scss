@@ -21,6 +21,10 @@
   max-height: 100%;
 }
 
+.navi__logo--mobile {
+  display: none;
+}
+
 .navi__links-container {
   color: $dark-grey;
 }
@@ -35,6 +39,11 @@
   position: absolute;
   bottom: 1rem;
 }
+
+.navi__menu-toggle {
+  display: none;
+}
+
 
 /* Mobile Styling */
 @media (max-width: $tablet-breakpoint) {
