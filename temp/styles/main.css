@@ -563,7 +563,7 @@ img {
 }
 
 /* Tablet Styling */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .section {
     padding: 0;
   }
@@ -830,7 +830,7 @@ img {
   z-index: 2;
 }
 
-.navi__logo {
+.navi__logo--desktop {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   max-width: 100%;
@@ -856,25 +856,30 @@ img {
   bottom: 1rem;
 }
 
-.navi__menu-toggle {
-  display: none;
-}
-
-/* Mobile Styling */
-@media (max-width: 768px) {
+/* Tablet Styling */
+@media (max-width: 900px) {
   .navi {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
-    padding: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: auto 0;
+    width: 75%;
+  }
+  .navi__logo--desktop {
+    display: none;
+  }
+  .navi__logo--mobile {
+    display: block;
+    max-height: 30px;
+    width: auto;
   }
   .navi li {
     display: block;
     margin-left: 0;
+    text-align: right;
   }
   .navi ul {
     padding-left: 0;
@@ -882,6 +887,25 @@ img {
   }
   .navi__links-container {
     padding-left: 2rem;
+  }
+}
+
+/* Mobile Styling */
+@media (max-width: 425px) {
+  .navi {
+    padding: 1rem 0 0;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navi li {
+    font-size: 2vw;
+    text-align: left;
   }
 }
 
@@ -923,7 +947,7 @@ img {
 }
 
 /* Tablet Styling */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .beer-section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1068,7 +1092,7 @@ img {
 }
 
 /* Tablet Styling */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .mastery__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1083,7 +1107,8 @@ img {
     -ms-flex-item-align: center;
         align-self: center;
     height: 6vh;
-    width: 13vh;
+    width: 20vh;
+    font-size: 4.5vw;
   }
   .mastery__btn-container {
     left: 0;
@@ -1109,12 +1134,6 @@ img {
 }
 
 /* iPhone 5 Styling */
-@media (max-width: 320px) {
-  .mastery__btn {
-    font-size: 12px;
-  }
-}
-
 /* ************************************************** */
 /* Since 1871 Styles */
 /* ************************************************** */
@@ -1191,7 +1210,7 @@ img {
 }
 
 /* Tablet Styling */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .instagram-section {
     width: 75%;
   }
@@ -1245,7 +1264,7 @@ img {
 }
 
 /* Tablet Styling */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .footer-section {
     width: 75%;
   }

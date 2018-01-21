@@ -93,7 +93,8 @@
   .mastery__btn {
     align-self: center;
     height: 6vh;
-    width: 13vh;
+    width: 20vh;
+    font-size: 4.5vw;
   }
 
   .mastery__btn-container {
@@ -121,7 +122,7 @@
 
 /* iPhone 5 Styling */
 @media (max-width: $s-mobile-breakpoint) {
-  .mastery__btn {
-    font-size: 12px;
-  }
+  // .mastery__btn {
+  //   font-size: 12px;
+  // }
 }
