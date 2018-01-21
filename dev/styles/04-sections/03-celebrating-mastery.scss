@@ -11,6 +11,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  border-bottom: 2px solid $light-grey;
+  padding-bottom: 150px;
 }
 
 .mastery__h2 {
@@ -29,6 +31,8 @@
   flex-direction: column;
   border: 2px solid $light-grey;
   border-radius: 2px;
+  margin-top: -20vh;
+
 }
 .mastery__img-container--left {
   align-self: flex-start;
@@ -36,9 +40,12 @@
 
 .mastery__img-container--right {
   align-self: flex-end;
-  margin-top: -20vh;
 }
 
+.mastery__img-container--top {
+  align-self: flex-start;
+  margin-top: 0;
+}
 .mastery__btn-container {
   display: inline-block;
   position: relative;

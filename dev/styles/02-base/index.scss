@@ -117,16 +117,40 @@ visibility: hidden;
 }
 
 body {
-font-size: 62.5%;
-margin-top: 150px;
-font-family: Teko, sans-serif;
+  font-size: 62.5%;
+  margin-top: 150px;
+  font-family: Teko, sans-serif;
 }
 
 .content-container {
-max-width: 1200px;
-margin: 0 auto;
-// display: flex;
-// flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lines-container {
+  position: absolute;
+  z-index: -1;
+}
+
+.lines-container img {
+  width: 6vw;
+}
+
+.lines-container--left {
+  left: 0;
+  max-width: 15px;
+}
+
+.lines-container--top {
+  top: 25vh;
+}
+
+.lines-container--right {
+  right: 0;
+}
+
+.lines-img {
+  // width: 50%;
 }
 
 /* ==========================================================================
