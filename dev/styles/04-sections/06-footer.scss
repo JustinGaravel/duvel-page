@@ -5,8 +5,7 @@
 .footer-section {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  // padding: 1rem 2rem;
+  margin: 0 auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-top: 2px solid $light-grey;
@@ -21,4 +20,26 @@
 
 .footer__copyright {
   font-size: 1.2rem;
+}
+
+/* Tablet Styling */
+@media (max-width: $tablet-breakpoint) {
+  .footer-section {
+    width: 75%;
+  }
+  .footer__logo {
+    width: 15%;
+    height: 15%;
+  }
+}
+
+/* Mobile Styling */
+@media (max-width: $mobile-breakpoint) {
+  .footer-section {
+    width: 90%;
+  }
+  .footer__logo {
+    width: 20%;
+    height: 20%;
+  }
 }

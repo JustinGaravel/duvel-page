@@ -3,8 +3,9 @@
 /* ************************************************** */
 
 .instagram-section {
-  margin: 4rem 0;
+  margin: 4rem auto;
   min-height: 40vh;
+  padding-bottom: 4rem;
 }
 .instagram-section h3 {
   font-size: 3.6rem;
@@ -22,13 +23,13 @@
 }
 
 .instagram-section__img {
-  max-width: 250px;
+  width: 225px;
 }
-
 
 /* Tablet Styling */
 @media (max-width: $tablet-breakpoint) {
   .instagram-section {
+    width: 75%;
   }
 }
 
@@ -36,6 +37,9 @@
 @media (max-width: $mobile-breakpoint) {
   .instagram-section {
     width: 90%;
+  }
+  .instagram-section__img {
+    width: 100%;
   }
   .instagram-section__img-box {
     flex-direction: column;

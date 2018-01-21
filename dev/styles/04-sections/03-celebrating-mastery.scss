@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border-bottom: 2px solid $light-grey;
+  // border-bottom: 2px solid $light-grey;
   padding-bottom: $navi-height;
   margin: auto;
 }
@@ -36,11 +36,11 @@
   width: 40%;
   display: flex;
   flex-direction: column;
-  border: 2px solid $light-grey;
   border-radius: 2px;
   padding-top: 2rem;
   margin-top: -20vh;
 }
+
 .mastery__img-container--left {
   align-self: flex-start;
 }
@@ -51,16 +51,16 @@
 
 .mastery__img-container--top {
   align-self: flex-start;
-  margin-top: 0;
+  margin-top: 4rem;;
 }
 .mastery__btn-container {
   display: inline;
   position: relative;
-  top: 20px;
+  top: 15px;
   left: 160px;
 }
 .mastery__btn {
-  border-radius: 4px;
+  border-radius: 2px;
   color: #fff;
   background: $duvel-red;
   font-size: 1.2rem;
@@ -90,10 +90,14 @@
     width: 75%;
   }
   .mastery__btn {
-    // display: none;
+    height: 6vh;
+    width: 13vh;
+    align-self: center;
   }
+
   .mastery__btn-container {
     left: 0;
+    top: 30px;
   }
 
   .mastery__img-container {
@@ -110,14 +114,7 @@
     width: 90%;
   }
   .mastery__btn-container {
-    top: 40px;
-  }
-  .mastery__btn {
-    height: 4.4rem;
-    width: 8.8rem;
-    align-self: center;
-  }
-  .mastery__img-container {
-
+    left: 0;
+    top: 20px;
   }
 }
