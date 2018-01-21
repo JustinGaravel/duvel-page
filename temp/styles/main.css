@@ -772,7 +772,7 @@ body {
   width: 100%;
   top: 0;
   position: fixed;
-  padding: 1rem 5rem;
+  padding: .5rem 5rem;
   background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -806,13 +806,22 @@ body {
 /* Mobile Styling */
 @media (max-width: 768px) {
   .navi {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
   }
   .navi li {
     display: block;
+    margin-left: 0;
+  }
+  .navi ul {
+    padding-left: 0;
+    position: static;
   }
 }
 
@@ -960,7 +969,7 @@ body {
 }
 
 .since__video-container-container {
-  padding: 4rem 0;
+  padding: 4rem 6rem;
 }
 
 .since__video-container {
