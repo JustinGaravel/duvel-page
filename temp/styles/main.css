@@ -575,11 +575,6 @@ body {
   font-family: Teko, sans-serif;
 }
 
-.content-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .lines-container {
   position: absolute;
   z-index: -1;
@@ -600,6 +595,10 @@ body {
 
 .lines-container--right {
   right: 0;
+}
+
+.section {
+  padding: 0 5rem;
 }
 
 /* ==========================================================================
@@ -772,11 +771,9 @@ body {
 .navi {
   min-height: 12vh;
   width: 100%;
-  overflow: hidden;
   top: 0;
-  left: 0;
   position: fixed;
-  padding: 10px 16px;
+  padding: 1rem 5rem;
   background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -784,11 +781,6 @@ body {
   overflow: hidden;
   border-bottom: 2px solid #efefef;
   z-index: 2;
-}
-
-.navi__content {
-  max-width: 1200px;
-  margin: auto;
 }
 
 .navi__logo {
@@ -834,7 +826,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 90vh;
+  height: 88vh;
   border-bottom: 2px solid #efefef;
 }
 
@@ -894,7 +886,6 @@ body {
 
 .mastery__img-container {
   background: #efefef;
-  margin: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -969,7 +960,7 @@ body {
 }
 
 .since__video-container-container {
-  padding: 4rem;
+  padding: 4rem 0;
 }
 
 .since__video-container {
@@ -1047,7 +1038,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   border-top: 2px solid #efefef;
 }
 

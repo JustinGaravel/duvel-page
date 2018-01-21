@@ -122,10 +122,10 @@ body {
   font-family: Teko, sans-serif;
 }
 
-.content-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+// .content-container {
+//   max-width: 1200px;
+//   margin: 0 auto;
+// }
 
 .lines-container {
   position: absolute;
@@ -151,6 +151,10 @@ body {
 
 .lines-img {
   // width: 50%;
+}
+
+.section {
+  padding: 0 5rem;
 }
 
 /* ==========================================================================
