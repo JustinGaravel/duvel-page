@@ -560,6 +560,18 @@ h6 {
   font-size: 1rem;
 }
 
+/* Mobile Fonts */
+@media (max-width: 425px) {
+  h1 {
+    font-size: 3.2rem;
+    margin: 0;
+  }
+  h2 {
+    font-size: 2.6rem;
+    margin: 0;
+  }
+}
+
 /* Used to properly offset anchor links when using sticky header */
 .anchor {
   display: block;
@@ -891,6 +903,7 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-bottom: 2rem;
   }
   .beer__text-container {
     padding: 0;
@@ -925,7 +938,6 @@ img {
   }
   .beer__h1 {
     padding: 0;
-    font-size: 3.2rem;
     margin-top: .5rem;
   }
 }
@@ -949,8 +961,13 @@ img {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   border-bottom: 2px solid #efefef;
-  padding-bottom: 150px;
+  padding-bottom: 12vh;
   margin: auto;
+}
+
+.mastery__h1 {
+  margin-bottom: .5rem;
+  line-height: calc(.8em + .2vh);
 }
 
 .mastery__h2 {
@@ -977,7 +994,6 @@ img {
           flex-direction: column;
   border: 2px solid #efefef;
   border-radius: 2px;
-  margin: 2rem;
   padding-top: 2rem;
   margin-top: -20vh;
 }
@@ -999,23 +1015,22 @@ img {
 }
 
 .mastery__btn-container {
-  display: inline-block;
+  display: inline;
   position: relative;
   top: 20px;
   left: 160px;
 }
 
 .mastery__btn {
-  border-radius: 6px;
+  border-radius: 4px;
   color: #fff;
   background: red;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
   font-size: 1.2rem;
   padding: 6px 12px;
   font-family: 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
   text-align: center;
+  border: none;
 }
 
 .mastery__btn:hover {
@@ -1044,11 +1059,11 @@ img {
             justify-content: center;
     width: 75%;
   }
-  .mastery__btn {
-    display: none;
+  .mastery__btn-container {
+    left: 0;
   }
   .mastery__img-container {
-    margin-top: 2rem;
+    margin-top: 4rem;
     -ms-flex-item-align: center;
         align-self: center;
     width: 100%;
@@ -1058,7 +1073,17 @@ img {
 /* Mobile Styling */
 @media (max-width: 425px) {
   .mastery__container {
+    margin-top: 2rem;
     width: 90%;
+  }
+  .mastery__btn-container {
+    top: 40px;
+  }
+  .mastery__btn {
+    height: 4.4rem;
+    width: 8.8rem;
+    -ms-flex-item-align: center;
+        align-self: center;
   }
 }
 
@@ -1070,6 +1095,7 @@ img {
 }
 
 .since__video-container-container {
+  margin-top: 2rem;
   padding: 4rem 6rem;
 }
 
@@ -1094,7 +1120,7 @@ img {
 /* ************************************************** */
 .instagram-section {
   margin: 4rem 0;
-  height: 40vh;
+  min-height: 40vh;
 }
 
 .instagram-section h3 {
@@ -1126,8 +1152,12 @@ img {
   max-width: 250px;
 }
 
+/* Tablet Styling */
 /* Mobile Styling */
 @media (max-width: 425px) {
+  .instagram-section {
+    width: 90%;
+  }
   .instagram-section__img-box {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

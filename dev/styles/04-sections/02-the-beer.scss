@@ -38,6 +38,7 @@
 @media (max-width : $tablet-breakpoint) {
   .beer-section {
     flex-direction: column;
+    padding-bottom: 2rem;
   }
   .beer__text-container {
     padding: 0;
@@ -68,7 +69,6 @@
   }
   .beer__h1 {
     padding: 0;
-    font-size: 3.2rem;
     margin-top: .5rem;
   }
 }
