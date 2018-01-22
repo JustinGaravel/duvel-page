@@ -71,11 +71,6 @@
   text-align: center;
 }
 
-.mastery__btn:hover {
-  transition: 400ms all;
-  // background: $duvel-tan;
-  // color: #000;
-}
 .mastery__img {
   flex-shrink: 0;
   -webkit-flex-shrink: 0;
@@ -118,11 +113,4 @@
   .mastery__btn-container {
     top: 20px;
   }
-}
-
-/* iPhone 5 Styling */
-@media (max-width: $s-mobile-breakpoint) {
-  // .mastery__btn {
-  //   font-size: 12px;
-  // }
 }

@@ -3,28 +3,25 @@
 /* ************************************************** */
 
 .navi {
+  background: #fff;
+  border-bottom: 2px solid $light-grey;
+  display: flex;
   min-height: $navi-height;
-  width: 100%;
-  top: 0;
   position: fixed;
   padding: .5rem 5rem;
-  background: #fff;
-  display: flex;
-  border-bottom: 2px solid $light-grey;
+  top: 0;
+  width: 100%;
   z-index: 2;
 }
 
-.navi__logo--desktop {
+.navi__logo {
   flex-shrink: 0;
-  max-width: 100%;
   max-height: 100%;
+  max-width: 100%;
 }
 
 .navi__logo--mobile {
   display: none;
-  flex-shrink: 0;
-  max-width: 100%;
-  max-height: 100%;
 }
 
 .navi__links-container {
@@ -51,7 +48,6 @@
   .navi {
     align-items: center;
     justify-content: space-between;
-    // margin: auto 0;
     width: 75%;
   }
   
@@ -73,10 +69,6 @@
   .navi ul {
     padding-left: 0;
     position: static;
-  }
-
-  .navi__links-container {
-    // padding-left: 2rem;
   }
 }
 
