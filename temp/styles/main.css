@@ -514,8 +514,8 @@ h6 {
 /* Used to properly offset anchor links when using sticky header */
 .anchor {
   display: block;
-  height: 12vh;
-  margin-top: -12vh;
+  height: 15vh;
+  margin-top: -15vh;
   visibility: hidden;
 }
 
@@ -691,12 +691,17 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 12vh;
+  height: 15vh;
   position: fixed;
   padding: .5rem 5rem;
   top: 0;
   width: 100%;
   z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  /* Standard */
 }
 
 .navi__logo {
@@ -777,6 +782,7 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 18vh;
     padding: 1rem 0 0;
     width: 100%;
     -webkit-box-pack: center;
@@ -786,6 +792,9 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .navi a {
+    line-height: 1.2;
   }
   .navi li {
     font-size: 2vw;
@@ -895,7 +904,7 @@ img {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding-bottom: 12vh;
+  padding-bottom: 15vh;
   padding-top: 3.6rem;
   margin: auto;
 }
@@ -950,9 +959,9 @@ img {
 
 .mastery__btn-container {
   display: inline;
-  left: 160px;
+  left: 8vw;
   position: relative;
-  top: 15px;
+  top: 2vh;
 }
 
 .mastery__btn {
@@ -991,13 +1000,13 @@ img {
   .mastery__btn {
     -ms-flex-item-align: center;
         align-self: center;
-    height: 6vh;
-    width: 20vh;
+    height: 8vh;
+    width: 22vh;
     font-size: 4.5vw;
   }
   .mastery__btn-container {
     left: 0;
-    top: 30px;
+    top: 3vh;
   }
   .mastery__img-container {
     -ms-flex-item-align: center;

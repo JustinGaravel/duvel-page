@@ -54,9 +54,9 @@
 }
 .mastery__btn-container {
   display: inline;
-  left: 160px;
+  left: 8vw;
   position: relative;
-  top: 15px;
+  top: 2vh;
 }
 .mastery__btn {
   background: $duvel-red;
@@ -87,14 +87,14 @@
   }
   .mastery__btn {
     align-self: center;
-    height: 6vh;
-    width: 20vh;
+    height: 8vh;
+    width: 22vh;
     font-size: 4.5vw;
   }
 
   .mastery__btn-container {
     left: 0;
-    top: 30px;
+    top: 3vh;
   }
 
   .mastery__img-container {

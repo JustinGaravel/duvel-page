@@ -1,6 +1,10 @@
+// Breakpoints
+$s-mobile-breakpoint: 320px;
+$mobile-breakpoint: 425px;
+$tablet-breakpoint: 900px;
 
 // Sizes
-$navi-height: 12vh;
+$navi-height: 15vh;
 
 // Colors
 $light-grey: #efefef;
@@ -8,8 +12,3 @@ $grey: #aaaaaa;
 $dark-grey: rgb(65, 65, 65);
 $duvel-red: #EA1829;
 $duvel-tan: #EDE2C6;
-
-// Breakpoints
-$s-mobile-breakpoint: 320px;
-$mobile-breakpoint: 425px;
-$tablet-breakpoint: 900px;
