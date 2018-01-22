@@ -825,7 +825,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
   border-bottom: 2px solid #efefef;
   z-index: 2;
 }
@@ -839,6 +838,10 @@ img {
 
 .navi__logo--mobile {
   display: none;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .navi__links-container {
@@ -858,6 +861,10 @@ img {
 
 /* Tablet Styling */
 @media (max-width: 900px) {
+  .navi__container {
+    width: 100%;
+    border: 2px solid #efefef;
+  }
   .navi {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -865,7 +872,6 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin: auto 0;
     width: 75%;
   }
   .navi__logo--desktop {
@@ -885,9 +891,6 @@ img {
     padding-left: 0;
     position: static;
   }
-  .navi__links-container {
-    padding-left: 2rem;
-  }
 }
 
 /* Mobile Styling */
@@ -905,7 +908,7 @@ img {
   }
   .navi li {
     font-size: 2vw;
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -961,7 +964,7 @@ img {
         -ms-flex-order: 2;
             order: 2;
     padding-bottom: 2rem;
-    width: 75%;
+    width: 75vw;
   }
   .beer__img-container {
     border: none;
@@ -969,7 +972,7 @@ img {
         -ms-flex-order: 1;
             order: 1;
     padding-top: 2rem;
-    width: 75%;
+    width: 75vw;
   }
 }
 
