@@ -519,6 +519,14 @@ h6 {
   visibility: hidden;
 }
 
+/* iPhone SE needs a special anchor size */
+@media (max-width: 320px) {
+  .anchor {
+    height: 20vh;
+    margin-top: -20vh;
+  }
+}
+
 body {
   font-size: 62.5%;
   margin-top: 150px;
@@ -805,6 +813,16 @@ img {
   }
   .navi__logo-container {
     padding-left: 0;
+  }
+}
+
+/* iPhone SE Styling */
+@media (max-width: 320px) {
+  .navi {
+    height: 20vh;
+  }
+  .navi a {
+    line-height: 1.1;
   }
 }
 

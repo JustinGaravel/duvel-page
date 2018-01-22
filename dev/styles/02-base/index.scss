@@ -60,6 +60,14 @@ h6 { font-size: 1rem; }
   visibility: hidden;
 }
 
+/* iPhone SE needs a special anchor size */
+@media (max-width: $s-mobile-breakpoint) {
+  .anchor {
+    height: 20vh;
+    margin-top: -20vh;
+  }
+}
+
 body {
   font-size: 62.5%;
   margin-top: 150px;
