@@ -857,7 +857,7 @@ img {
 }
 
 /* ************************************************** */
-/* Celebrating Mastery Styles */
+/*            Celebrating Mastery Styles              */
 /* ************************************************** */
 .mastery__img-container h1, h2, h3, h4, h5, h6, p {
   margin: 0;
@@ -936,7 +936,7 @@ img {
 .mastery__btn {
   background: #EA1829;
   border: none;
-  border-radius: 2px;
+  border-radius: 6px;
   color: #fff;
   cursor: pointer;
   font-family: 'Roboto Condensed', sans-serif;

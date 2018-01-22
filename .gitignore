@@ -103,4 +103,7 @@ typings/
 # Production built code
 /prod
 
+# code served while using 'gulp serve'
+/temp
+
 # End of https://www.gitignore.io/api/git,node,macos,visualstudiocode
