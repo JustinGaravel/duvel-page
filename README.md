@@ -1,8 +1,5 @@
 # Trainspot HTML Integration Test - Duvel Page
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
-
-
 ## Usage
 
 For development, run `gulp serve`, which runs multiple development-related tasks, then launches your default browser and listens for changes.
@@ -13,8 +10,8 @@ For Production code, run `gulp build` and the code will appear in `/prod` in you
 
 ```zsh
   yarn install
-
 ```
+
 ## Testing
 
 I have tested this using IE10, 11, Edge, Safari(mobile and desktop), Chrome, and Firefox.
@@ -23,13 +20,15 @@ I have tested this using IE10, 11, Edge, Safari(mobile and desktop), Chrome, and
 
 * Polyfill for smooth scrolling in Safari is likely buggy. While it scrolls the first time, if you click the element again it moves slightly another time.
 
+* Smooth scrolling to the anchors is off by a few increments on all devices.
+
 ## Future Improvements
 
-*I'd like to add a hamburger dropdown navigation for all forms of mobile.
+* I'd like to add a hamburger dropdown navigation for all forms of mobile.
 
-*The animations are lacking on desktop so I'd like to improve them.
+* The animations are lacking on desktop so I'd like to improve them.
 
-*Integration of Instagram API.
+* Integration of Instagram API.
 
 ## License
 

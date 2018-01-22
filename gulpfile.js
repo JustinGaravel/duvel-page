@@ -1,5 +1,6 @@
-/*jslint node: true, for */
 
+/*     Originally taken from code-warrior. No license listed          */
+/* https://github.com/code-warrior/gulp-template-for-html-css-sass-js */
 var gulp = require('gulp'),
     del = require('del'),
     sass = require('gulp-sass'),
