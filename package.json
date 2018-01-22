@@ -6,9 +6,9 @@
   "license": "MIT",
   "dependencies": {},
   "scripts": {
-    "start": "browser-sync start --s --f ['*/index.html', 'js/*.js' 'css/*.css'] --ss './src'",
-    "serve": "gulp serve",
-    "sass": "gulp sass"
+    "build": "gulp build",
+    "sass": "gulp sass",
+    "serve": "gulp serve"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
