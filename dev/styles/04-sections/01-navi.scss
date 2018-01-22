@@ -41,13 +41,21 @@
 /* Tablet Styling */
 @media (max-width: $tablet-breakpoint) {
   .navi__container {
-    width: 100%;
+    width: 75%;
     border: 2px solid $light-grey;
   }
   .navi {
-    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
-    width: 75%;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+  }
+  .navi__links-container {
+    padding-right: 12.5vw;
+  }
+  .navi__logo-container {
+    padding-left: 12.5vw;
   }
   
   .navi__logo--desktop {
@@ -55,7 +63,7 @@
   }
 
   .navi__logo--mobile {
-    display: block;
+    display: inline-flex;
     max-height: 30px;
     width: auto;
   }
@@ -74,6 +82,7 @@
 /* Mobile Styling */
 @media (max-width: $mobile-breakpoint) {
   .navi {
+    align-items: center;
     padding: 1rem 0 0;
     width: 100%;
     justify-content: center;
@@ -82,5 +91,11 @@
   .navi li {
     font-size: 2vw;
     text-align: center;
+  }
+  .navi__links-container {
+    padding-right: 0;
+  }
+  .navi__logo-container {
+    padding-left: 0;
   }
 }

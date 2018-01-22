@@ -1,9 +1,6 @@
 
-/* Run on pageload */
-(function() {
-  toggleHover();
-
-})();
+/* Run after pageload */
+document.onload = toggleHover();
 
 
 /* ************************************************** */
