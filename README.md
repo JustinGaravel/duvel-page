@@ -2,9 +2,9 @@
 
 ## Usage
 
-For development, run `gulp serve`, which runs multiple development-related tasks, then launches your default browser and listens for changes.
+For development, run `yarn serve`, which runs multiple development-related tasks, then launches your default browser and listens for changes.
 
-For Production code, run `gulp build` and the code will appear in `/prod` in your project.
+For Production code, run `yarn build` and the code will appear in `/prod` in your project.
 
 ## Installation
 
