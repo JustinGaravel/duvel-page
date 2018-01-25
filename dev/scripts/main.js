@@ -1,7 +1,5 @@
-
 /* Run after pageload */
 document.onload = toggleHover();
-
 
 /* ************************************************** */
 /*                Helper Functions                    */
@@ -10,26 +8,25 @@ document.onload = toggleHover();
 /* helper functions to scroll to correct point in page due to sticky header offset */
 
 function toTheBeer() {
-  document.querySelector('#the-beer').scrollIntoView({ 
-    behavior: 'smooth',
-    block: 'start',
+  document.querySelector("#the-beer").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
   });
-};
+}
 
 function toCelebratingMastery() {
-  document.querySelector('#celebrating-mastery').scrollIntoView({ 
-    behavior: 'smooth',
-    block: 'start',
+  document.querySelector("#celebrating-mastery").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
   });
-};
+}
 
 function toSince1871() {
-  document.querySelector('#since-1871').scrollIntoView({ 
-    behavior: 'smooth',
-    block: 'start',
+  document.querySelector("#since-1871").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
   });
-};
-
+}
 
 /* removes the hover effect on the instagram photos on tablet(or smaller) because they look silly */
 function toggleHover(e) {
@@ -50,4 +47,3 @@ function toggleHover(e) {
 /* ************************************************** */
 
 window.addEventListener("resize", toggleHover);
-

@@ -8,12 +8,11 @@
   display: flex;
   height: $navi-height;
   position: fixed;
-  padding: .5rem 5rem;
+  padding: 0.5rem 5rem;
   top: 0;
   width: 100%;
   z-index: 2;
   user-select: none; /* Standard */
-
 }
 
 .navi__logo {
@@ -60,7 +59,7 @@
   .navi__logo-container {
     padding-left: 12.5vw;
   }
-  
+
   .navi__logo--desktop {
     display: none;
   }
@@ -96,7 +95,7 @@
   .navi a {
     line-height: 1.2;
   }
-  
+
   .navi li {
     font-size: 2vw;
     text-align: center;
@@ -120,5 +119,4 @@
   .navi a {
     line-height: 1.1;
   }
-  
 }

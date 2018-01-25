@@ -1,24 +1,23 @@
-
 /*     Originally taken from code-warrior. No license listed          */
 /* https://github.com/code-warrior/gulp-template-for-html-css-sass-js */
-var gulp = require('gulp'),
-    del = require('del'),
-    sass = require('gulp-sass'),
-    babel = require("gulp-babel"),
-    cssCompressor = require('gulp-csso'),
-    browserSpecificPrefixer = require('gulp-autoprefixer'),
-    htmlMinifier = require('gulp-htmlmin'),
-    htmlValidator = require('gulp-html'),
-    jsConcatenator = require('gulp-concat'),
-    jsLinter = require('gulp-eslint'),
-    jsCompressor = require('gulp-uglify'),
-    imageCompressor = require('gulp-imagemin'),
-    tempCache = require('gulp-cache'),
-    browserSync = require('browser-sync'),
-    config = require('./config.json'),
-    colors = config.colors,
-    reload = browserSync.reload,
-    browserChoice = 'default';
+var gulp = require("gulp"),
+  del = require("del"),
+  sass = require("gulp-sass"),
+  babel = require("gulp-babel"),
+  cssCompressor = require("gulp-csso"),
+  browserSpecificPrefixer = require("gulp-autoprefixer"),
+  htmlMinifier = require("gulp-htmlmin"),
+  htmlValidator = require("gulp-html"),
+  jsConcatenator = require("gulp-concat"),
+  jsLinter = require("gulp-eslint"),
+  jsCompressor = require("gulp-uglify"),
+  imageCompressor = require("gulp-imagemin"),
+  tempCache = require("gulp-cache"),
+  browserSync = require("browser-sync"),
+  config = require("./config.json"),
+  colors = config.colors,
+  reload = browserSync.reload,
+  browserChoice = "default";
 
 /**
  * CHOOSE A BROWSER OTHER THAN THE DEFAULT
@@ -35,40 +34,46 @@ var gulp = require('gulp'),
  *    gulp allBrowsers serve
  */
 
-gulp.task('safari', function () {
-    'use strict';
+gulp.task("safari", function() {
+  "use strict";
 
-    browserChoice = 'safari';
+  browserChoice = "safari";
 });
 
-gulp.task('firefox', function () {
-    'use strict';
+gulp.task("firefox", function() {
+  "use strict";
 
-    browserChoice = 'firefox';
+  browserChoice = "firefox";
 });
 
-gulp.task('chrome', function () {
-    'use strict';
+gulp.task("chrome", function() {
+  "use strict";
 
-    browserChoice = 'google chrome';
+  browserChoice = "google chrome";
 });
 
-gulp.task('opera', function () {
-    'use strict';
+gulp.task("opera", function() {
+  "use strict";
 
-    browserChoice = 'opera';
+  browserChoice = "opera";
 });
 
-gulp.task('edge', function () {
-    'use strict';
+gulp.task("edge", function() {
+  "use strict";
 
-    browserChoice = 'microsoft-edge';
+  browserChoice = "microsoft-edge";
 });
 
-gulp.task('allBrowsers', function () {
-    'use strict';
+gulp.task("allBrowsers", function() {
+  "use strict";
 
-    browserChoice = ['safari', 'firefox', 'google chrome', 'opera', 'microsoft-edge'];
+  browserChoice = [
+    "safari",
+    "firefox",
+    "google chrome",
+    "opera",
+    "microsoft-edge"
+  ];
 });
 
 /**
@@ -83,9 +88,10 @@ gulp.task('allBrowsers', function () {
  * Note: Regardless of whether your HTML validates or not, no files are copied to a
  * destination folder.
  */
-gulp.task('validateHTML', function () {
-    return gulp.src(['dev/html/*.html', 'dev/html/**/*.html'])
-        .pipe(htmlValidator());
+gulp.task("validateHTML", function() {
+  return gulp
+    .src(["dev/html/*.html", "dev/html/**/*.html"])
+    .pipe(htmlValidator());
 });
 
 /**
@@ -94,15 +100,18 @@ gulp.task('validateHTML', function () {
  * This task sources all the HTML files in the dev/html folder, strips comments and
  * whitespace from them, then writes the compressed files to the production folder.
  */
-gulp.task('compressHTML', function () {
-    'use strict';
+gulp.task("compressHTML", function() {
+  "use strict";
 
-    return gulp.src(['dev/html/*.html', 'dev/html/**/*.html'])
-        .pipe(htmlMinifier({
-            removeComments: true,
-            collapseWhitespace: true
-        }))
-        .pipe(gulp.dest('prod'));
+  return gulp
+    .src(["dev/html/*.html", "dev/html/**/*.html"])
+    .pipe(
+      htmlMinifier({
+        removeComments: true,
+        collapseWhitespace: true
+      })
+    )
+    .pipe(gulp.dest("prod"));
 });
 
 /**
@@ -114,18 +123,23 @@ gulp.task('compressHTML', function () {
  * carried out 10 places, and browser-specific prefixes will be added to support 2
  * browser versions behind all current browsers’ versions.
  */
-gulp.task('compileCSSForDev', function () {
-    'use strict';
+gulp.task("compileCSSForDev", function() {
+  "use strict";
 
-    return gulp.src('dev/styles/main.scss')
-        .pipe(sass({
-            outputStyle: 'expanded',
-            precision: 10
-        }).on('error', sass.logError))
-        .pipe(browserSpecificPrefixer({
-            browsers: ['last 2 versions']
-        }))
-        .pipe(gulp.dest('temp/styles'));
+  return gulp
+    .src("dev/styles/main.scss")
+    .pipe(
+      sass({
+        outputStyle: "expanded",
+        precision: 10
+      }).on("error", sass.logError)
+    )
+    .pipe(
+      browserSpecificPrefixer({
+        browsers: ["last 2 versions"]
+      })
+    )
+    .pipe(gulp.dest("temp/styles"));
 });
 
 /**
@@ -138,19 +152,24 @@ gulp.task('compileCSSForDev', function () {
  * Lastly, the final CSS file is passed through two levels of compression:
  * “outputStyle” from Sass and compressCSS().
  */
-gulp.task('compileCSSForProd', function () {
-    'use strict';
+gulp.task("compileCSSForProd", function() {
+  "use strict";
 
-    return gulp.src('dev/styles/main.scss')
-        .pipe(sass({
-            outputStyle: 'compressed',
-            precision: 10
-        }).on('error', sass.logError))
-        .pipe(browserSpecificPrefixer({
-            browsers: ['last 2 versions']
-        }))
-        .pipe(cssCompressor())
-        .pipe(gulp.dest('prod/styles'));
+  return gulp
+    .src("dev/styles/main.scss")
+    .pipe(
+      sass({
+        outputStyle: "compressed",
+        precision: 10
+      }).on("error", sass.logError)
+    )
+    .pipe(
+      browserSpecificPrefixer({
+        browsers: ["last 2 versions"]
+      })
+    )
+    .pipe(cssCompressor())
+    .pipe(gulp.dest("prod/styles"));
 });
 
 /**
@@ -159,13 +178,14 @@ gulp.task('compileCSSForProd', function () {
  * This task sources all the JavaScript files in dev/scripts, concatenates them,
  * names the compiled file app.js, then writes the result to the temp/scripts folder.
  */
-gulp.task('compileJSForDev', function () {
-    'use strict';
+gulp.task("compileJSForDev", function() {
+  "use strict";
 
-    return gulp.src('dev/scripts/*.js')
-        .pipe(jsConcatenator('app.js'))
-        .pipe(babel())
-        .pipe(gulp.dest('temp/scripts'));
+  return gulp
+    .src("dev/scripts/*.js")
+    .pipe(jsConcatenator("app.js"))
+    .pipe(babel())
+    .pipe(gulp.dest("temp/scripts"));
 });
 
 /**
@@ -174,14 +194,15 @@ gulp.task('compileJSForDev', function () {
  * This task compiles one or more JavaScript files into a single file, app.js. The
  * resulting file is compressed then written to the production folder.
  */
-gulp.task('compileJSForProd', function () {
-    'use strict';
+gulp.task("compileJSForProd", function() {
+  "use strict";
 
-    return gulp.src('dev/scripts/*.js')
-        .pipe(jsConcatenator('app.js'))
-        .pipe(babel())
-        .pipe(jsCompressor())
-        .pipe(gulp.dest('prod/scripts'));
+  return gulp
+    .src("dev/scripts/*.js")
+    .pipe(jsConcatenator("app.js"))
+    .pipe(babel())
+    .pipe(jsCompressor())
+    .pipe(gulp.dest("prod/scripts"));
 });
 
 /**
@@ -193,35 +214,38 @@ gulp.task('compileJSForProd', function () {
  *
  * Note: The concatenated file app.js is *not* written to a destination folder.
  */
-gulp.task('lintJS', function () {
-    // 'use strict';
+gulp.task("lintJS", function() {
+  // 'use strict';
 
-    return gulp.src('dev/scripts/*.js')
-        .pipe(jsConcatenator('app.js'))
-        .pipe(jsLinter({
-            rules: {
-                indent: [2, 4, {SwitchCase: 1}],
-                quotes: [2, 'single'],
-                semi: [2, 'always'],
-                'linebreak-style': [2, 'unix'],
-                'max-len': [2, 85, 4]
-            },
-            env: {
-                es6: true,
-                node: true,
-                browser: true
-            },
-            extends: 'eslint:recommended'
-        }))
-        .pipe(jsLinter.formatEach('compact', process.stderr))
-        //
-        // “To have the process exit with an error code (1) on lint error, return
-        // the stream and pipe to failAfterError last.”
-        //
-        //     — https://github.com/adametry/gulp-eslint
-        //
-        .pipe(jsLinter.failAfterError())
-        .pipe(babel());
+  return (gulp
+      .src("dev/scripts/*.js")
+      .pipe(jsConcatenator("app.js"))
+      .pipe(
+        jsLinter({
+          rules: {
+            indent: [2, 4, { SwitchCase: 1 }],
+            quotes: [2, "single"],
+            semi: [2, "always"],
+            "linebreak-style": [2, "unix"],
+            "max-len": [2, 85, 4]
+          },
+          env: {
+            es6: true,
+            node: true,
+            browser: true
+          },
+          extends: "eslint:recommended"
+        })
+      )
+      .pipe(jsLinter.formatEach("compact", process.stderr))
+      //
+      // “To have the process exit with an error code (1) on lint error, return
+      // the stream and pipe to failAfterError last.”
+      //
+      //     — https://github.com/adametry/gulp-eslint
+      //
+      .pipe(jsLinter.failAfterError())
+      .pipe(babel()) );
 });
 
 /**
@@ -231,19 +255,22 @@ gulp.task('lintJS', function () {
  * the settings in the object passed to imageCompressor, then copies the final
  * compressed images to the prod/img folder.
  */
-gulp.task('compressThenCopyImagesToProdFolder', function () {
-    'use strict';
+gulp.task("compressThenCopyImagesToProdFolder", function() {
+  "use strict";
 
-    return gulp.src('dev/img/**/*')
-        .pipe(tempCache(
-            imageCompressor({
-                optimizationLevel: 3, // For PNG files. Accepts 0 – 7; 3 is default.
-                progressive: true,    // For JPG files.
-                multipass: false,     // For SVG files. Set to true for compression.
-                interlaced: false     // For GIF files. Set to true for compression.
-            })
-        ))
-        .pipe(gulp.dest('prod/img'));
+  return gulp
+    .src("dev/img/**/*")
+    .pipe(
+      tempCache(
+        imageCompressor({
+          optimizationLevel: 3, // For PNG files. Accepts 0 – 7; 3 is default.
+          progressive: true, // For JPG files.
+          multipass: false, // For SVG files. Set to true for compression.
+          interlaced: false // For GIF files. Set to true for compression.
+        })
+      )
+    )
+    .pipe(gulp.dest("prod/img"));
 });
 
 /**
@@ -257,19 +284,24 @@ gulp.task('compressThenCopyImagesToProdFolder', function () {
  * — JavaScript is concatenated and compressed by the compileJSForProd task
  * — Sass/CSS is concatenated and compressed by the compileCSSForProd task
  */
-gulp.task('copyUnprocessedAssetsToProdFolder', function () {
-    'use strict';
+gulp.task("copyUnprocessedAssetsToProdFolder", function() {
+  "use strict";
 
-    return gulp.src([
-        'dev/*.*',       // Source all files,
-        'dev/**',        // and all folders,
-        '!dev/html/',    // but not the HTML folder
-        '!dev/html/*.*', // or any files in it
-        '!dev/html/**',  // or any sub folders
-        '!dev/img/',     // ignore images;
-        '!dev/**/*.js',  // ignore JS;
-        '!dev/styles/**' // ignore Sass/CSS.
-    ], {dot: true}).pipe(gulp.dest('prod'));
+  return gulp
+    .src(
+      [
+        "dev/*.*", // Source all files,
+        "dev/**", // and all folders,
+        "!dev/html/", // but not the HTML folder
+        "!dev/html/*.*", // or any files in it
+        "!dev/html/**", // or any sub folders
+        "!dev/img/", // ignore images;
+        "!dev/**/*.js", // ignore JS;
+        "!dev/styles/**" // ignore Sass/CSS.
+      ],
+      { dot: true }
+    )
+    .pipe(gulp.dest("prod"));
 });
 
 /**
@@ -277,14 +309,14 @@ gulp.task('copyUnprocessedAssetsToProdFolder', function () {
  *
  * This task simply invokes other pre-defined tasks.
  */
-gulp.task('build', [
-    // 'validateHTML',
-    'compressHTML',
-    'compileCSSForProd',
-    // 'lintJS',
-    'compileJSForProd',
-    'compressThenCopyImagesToProdFolder',
-    'copyUnprocessedAssetsToProdFolder'
+gulp.task("build", [
+  // 'validateHTML',
+  "compressHTML",
+  "compileCSSForProd",
+  // 'lintJS',
+  "compileJSForProd",
+  "compressThenCopyImagesToProdFolder",
+  "copyUnprocessedAssetsToProdFolder"
 ]);
 
 /**
@@ -313,35 +345,37 @@ gulp.task('build', [
  *
  * Finally, changes to images also trigger a browser reload.
  */
-gulp.task('serve', ['compileCSSForDev', 'compileJSForDev', /*'lintJS', 'validateHTML' */], function () {
-    'use strict';
+gulp.task(
+  "serve",
+  ["compileCSSForDev", "compileJSForDev" /*'lintJS', 'validateHTML' */],
+  function() {
+    "use strict";
 
     browserSync({
-        notify: true,
-        port: 9000,
-        reloadDelay: 100,
-        browser: browserChoice,
-        server: {
-            baseDir: [
-                'temp',
-                'dev',
-                'dev/html'
-            ]
-        }
+      notify: true,
+      port: 9000,
+      reloadDelay: 100,
+      browser: browserChoice,
+      server: {
+        baseDir: ["temp", "dev", "dev/html"]
+      }
     });
 
-    gulp.watch('dev/scripts/*.js', ['compileJSForDev', 'lintJS'])
-        .on('change', reload);
+    gulp
+      .watch("dev/scripts/*.js", ["compileJSForDev", "lintJS"])
+      .on("change", reload);
 
-    gulp.watch('dev/styles/**/*.scss', ['compileCSSForDev'])
-        .on('change', reload);
+    gulp
+      .watch("dev/styles/**/*.scss", ["compileCSSForDev"])
+      .on("change", reload);
 
-    gulp.watch(['dev/html/**/*.html']/*, ['validateHTML']*/)
-        .on('change', reload);
+    gulp
+      .watch(["dev/html/**/*.html"] /*, ['validateHTML']*/)
+      .on("change", reload);
 
-    gulp.watch('dev/img/**/*')
-        .on('change', reload);
-});
+    gulp.watch("dev/img/**/*").on("change", reload);
+  }
+);
 
 /**
  * CLEAN
@@ -350,32 +384,50 @@ gulp.task('serve', ['compileCSSForDev', 'compileJSForDev', /*'lintJS', 'validate
  * Gulp creates them as temporary folders during the serve process and via the build
  * task.
  */
-gulp.task('clean', function () {
-    'use strict';
+gulp.task("clean", function() {
+  "use strict";
 
-    var fs = require('fs'),
-        i,
-        expendableFolders = ['temp', 'prod'];
+  var fs = require("fs"),
+    i,
+    expendableFolders = ["temp", "prod"];
 
-    for (i = 0; i < expendableFolders.length; i += 1) {
-        try {
-            fs.accessSync(expendableFolders[i], fs.F_OK);
-            process.stdout.write('\n\tThe ' + colors.green + expendableFolders[i] +
-                    colors.default + ' directory was found and ' + colors.green +
-                    'will' + colors.default + ' be deleted.\n');
-            del(expendableFolders[i]);
-        } catch (error) {
-            if (error) {
-                process.stdout.write('\n\tThe ' + colors.red +
-                        expendableFolders[i] + colors.default +
-                        ' directory does ' + colors.red + 'not' + colors.default +
-                        ' exist or is ' + colors.red + 'not' + colors.default +
-                        ' accessible.\n');
-            }
-        }
+  for (i = 0; i < expendableFolders.length; i += 1) {
+    try {
+      fs.accessSync(expendableFolders[i], fs.F_OK);
+      process.stdout.write(
+        "\n\tThe " +
+          colors.green +
+          expendableFolders[i] +
+          colors.default +
+          " directory was found and " +
+          colors.green +
+          "will" +
+          colors.default +
+          " be deleted.\n"
+      );
+      del(expendableFolders[i]);
+    } catch (error) {
+      if (error) {
+        process.stdout.write(
+          "\n\tThe " +
+            colors.red +
+            expendableFolders[i] +
+            colors.default +
+            " directory does " +
+            colors.red +
+            "not" +
+            colors.default +
+            " exist or is " +
+            colors.red +
+            "not" +
+            colors.default +
+            " accessible.\n"
+        );
+      }
     }
+  }
 
-    process.stdout.write('\n');
+  process.stdout.write("\n");
 });
 
 /**
@@ -383,24 +435,34 @@ gulp.task('clean', function () {
  *
  * This task does nothing but list the available tasks in this file.
  */
-gulp.task('default', function () {
-    'use strict';
+gulp.task("default", function() {
+  "use strict";
 
-    var exec = require('child_process').exec;
+  var exec = require("child_process").exec;
 
-    exec('gulp --tasks', function (error, stdout, stderr) {
-        if (null !== error) {
-            process.stdout.write('An error was likely generated when invoking ' +
-                    'the `exec` program in the default task.');
-        }
+  exec("gulp --tasks", function(error, stdout, stderr) {
+    if (null !== error) {
+      process.stdout.write(
+        "An error was likely generated when invoking " +
+          "the `exec` program in the default task."
+      );
+    }
 
-        if ('' !== stderr) {
-            process.stdout.write('Content has been written to the stderr stream ' +
-                    'when invoking the `exec` program in the default task.');
-        }
+    if ("" !== stderr) {
+      process.stdout.write(
+        "Content has been written to the stderr stream " +
+          "when invoking the `exec` program in the default task."
+      );
+    }
 
-        process.stdout.write('\n\tThis default task does ' + colors.red +
-                'nothing' + colors.default + ' but generate this message. The ' +
-                'available tasks are:\n\n' + stdout);
-    });
+    process.stdout.write(
+      "\n\tThis default task does " +
+        colors.red +
+        "nothing" +
+        colors.default +
+        " but generate this message. The " +
+        "available tasks are:\n\n" +
+        stdout
+    );
+  });
 });

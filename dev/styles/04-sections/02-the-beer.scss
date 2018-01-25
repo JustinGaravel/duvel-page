@@ -22,12 +22,12 @@
 }
 
 .beer__h1 {
-  line-height: calc(.8em + .2vh);
-  margin-bottom: .5rem;
+  line-height: calc(0.8em + 0.2vh);
+  margin-bottom: 0.5rem;
 }
 
 /* Tablet Styling */
-@media (max-width : $tablet-breakpoint) {
+@media (max-width: $tablet-breakpoint) {
   .beer-section {
     flex-direction: column;
     padding-bottom: 2rem;
@@ -57,6 +57,6 @@
   }
   .beer__h1 {
     padding: 0;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
 }

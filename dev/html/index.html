@@ -1,193 +1,207 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>New Duvel Beer</title>
-    <meta name="description" content="A new beer from Duvel coming soon">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="manifest" href="site.webmanifest">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>New Duvel Beer</title>
+  <meta name="description" content="A new beer from Duvel coming soon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/main.css">
-  </head>
-  <body>
-    <div class="navi">
-      <div class="navi__logo-container">
-        <a onclick="toTheBeer()">
-          <img class="navi__logo navi__logo--desktop" src="img/duvel_logo.png" alt="desktop duvel navi logo">
-          <img class="navi__logo navi__logo--mobile" src="img/duvel_logo_2.png" alt="desktop duvel navi logo">
-        </a>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <div class="navi">
+    <div class="navi__logo-container">
+      <a onclick="toTheBeer()">
+        <img class="navi__logo navi__logo--desktop" src="img/duvel_logo.png" alt="desktop duvel navi logo">
+        <img class="navi__logo navi__logo--mobile" src="img/duvel_logo_2.png" alt="desktop duvel navi logo">
+      </a>
+    </div>
+    <div class="navi__links-container">
+      <ul class="uppercase">
+        <li class="hvr-underline-from-center">
+          <a onclick="toTheBeer()">The Beer</a>
+        </li>
+        <li class="hvr-underline-from-center">
+          <a onclick="toCelebratingMastery()">Celebrating Mastery</a>
+        </li>
+        <li class="hvr-underline-from-center">
+          <a onclick="toSince1871()">Since 1871</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="content__container">
+    <!-- Beer Section -->
+    <span id="the-beer" class="anchor"></span>
+    <div class="lines-container lines-container--top lines-container--left">
+      <img class="lines-img" src="img/lines_left.png" alt="left detail">
+    </div>
+    <div id="beer-section" class="beer-section section">
+      <div class="beer__text-container">
+        <div class="beer__h1-container">
+          <h1 class="beer__h1">The Beer Section Header</h1>
+        </div>
+        <div class="beer_p-container">
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu ugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+        </div>
       </div>
-      <div class="navi__links-container">
-        <ul class="uppercase">
-          <li class="hvr-underline-from-center"><a onclick="toTheBeer()">The Beer</a></li>
-          <li class="hvr-underline-from-center"><a onclick="toCelebratingMastery()">Celebrating Mastery</a></li>
-          <li class="hvr-underline-from-center"><a onclick="toSince1871()">Since 1871</a></li>
-        </ul>
+      <div class="beer__img-container">
+        <img src="img/placeholder.png" alt="placeholder">
       </div>
     </div>
-    <div class="content__container">
-      <!-- Beer Section -->
-      <span id="the-beer" class="anchor"></span>
-      <div class="lines-container lines-container--top lines-container--left">
-          <img class="lines-img" src="img/lines_left.png" alt="left detail">
-      </div>
-      <div id="beer-section" class="beer-section section">
-        <div class="beer__text-container">
-          <div class="beer__h1-container">
-            <h1 class="beer__h1">The Beer Section Header</h1>
-          </div>
-          <div class="beer_p-container">
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-              ugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-              qui officia deserunt mollit anim id est laborum."
-            </p>
-          </div>
-        </div>
-        <div class="beer__img-container">
-          <img src="img/placeholder.png" alt="placeholder">
-        </div>
-      </div>
-      <div class="lines-container lines-container--right">
-        <img class="lines-img" src="img/lines_right.png" alt="right detail">
-      </div>
+    <div class="lines-container lines-container--right">
+      <img class="lines-img" src="img/lines_right.png" alt="right detail">
+    </div>
 
-      <!-- Celebrating Mastery Section -->
-      <span id="celebrating-mastery" class="anchor"></span>
-      <div id="mastery-section" class="section mastery__container">
-        <h1 class="mastery__h1">Mastery in Beer</h1>
-        <p>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua."
-        </p>
-        <div class="mastery__img-container mastery__img-container--top">
-          <h2 class="mastery__h2">Devilish <span class="mastery__h2--red">Passion</span></h2>
-          <p>Placeholder text goes here.</p>
-          <img src="img/illustration_passion.png" class="mastery__img" alt="devilish passion">
-          <div class="mastery__btn-container">
-            <button class="hvr-forward mastery__btn">More →</button>
-          </div>
-        </div>
-        <div class="mastery__img-container mastery__img-container--right">
-          <h2 class="mastery__h2">Devilish <span class="mastery__h2--red">Tenacity</span></h2>
-          <p>Placeholder text goes here.</p>
-          <img src="img/illustration_tenacity.png" class="mastery__img" alt="devilish tenacity">
-          <div class="mastery__btn-container">
-            <button class="hvr-forward mastery__btn">More →</button>
-          </div>
-        </div>
-        <div class="mastery__img-container mastery__img-container--left">
-          <h2 class="mastery__h2">Heavenly <span class="mastery__h2--red">Pioneering</span></h2>
-          <p>Placeholder text goes here.</p>
-          <img src="img/illustration_pioneering.png" class="mastery__img" alt="heavenly pioneering">
-          <div class="mastery__btn-container">
-            <button class="hvr-forward mastery__btn">More →</button>
-          </div>
-        </div>
-        <div class="lines-container lines-container--left">
-          <img class="lines-img" src="img/lines_left.png" alt="left detail">
-        </div>
-        <div class="mastery__img-container mastery__img-container--right">
-          <h2 class="mastery__h2">Heavenly <span class="mastery__h2--red">Patience</span></h2>
-          <p>Placeholder text goes here.</p>
-          <img src="img/illustration_patience.png" class="mastery__img" alt="heavenly patience">
-          <div class="mastery__btn-container">
-            <button class="hvr-forward hvr-forward mastery__btn">More →</button>
-          </div>
-        </div>
-        <div class="mastery__img-container mastery__img-container--left">
-          <h2 class="mastery__h2">Heavenly <span class="mastery__h2--red">Ritual</span></h2>
-          <p>Placeholder text goes here.</p>
-          <img src="img/illustration_ritual.png" class="mastery__img" alt="heavenly ritual">
-          <div class="mastery__btn-container">
-            <button class="hvr-forward mastery__btn">More →</button>
-          </div>
-        </div>
-        <div class="mastery__img-container mastery__img-container--right">
-          <h2 class="mastery__h2">Devilish <span class="mastery__h2--red">Details</span></h2>
-          <p>Placeholder text goes here.</p>
-          <img src="img/illustration_details.png" class="mastery__img" alt="devilish details">
-          <div class="mastery__btn-container">
-            <button class="hvr-forward mastery__btn">More →</button>
-          </div>
-        </div>
-      </div>
-      <div class="lines-container lines-container--right">
-        <img class="lines-img" src="img/lines_right.png" alt="right detail">
-      </div>
-
-      <!-- Since 1871 Section -->
-      <span id="since-1871" class="anchor"></span>
-      <div id="since-section" class="section since-section">
-        <div class="since__video-container-container">
-          <div class="since__video-container">
-            <iframe width="560" height="315"
-              class="since__video"
-              src="https://www.youtube.com/embed/Me92JY0QCvA?rel=0&amp;showinfo=0"
-              frameborder="0"
-              allow="encrypted-media"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Instagram Section -->
-      <div class="instagram-section section">
-        <h2>
-          <i class="fa fa-instagram"></i> @Duvel_Belgium
+    <!-- Celebrating Mastery Section -->
+    <span id="celebrating-mastery" class="anchor"></span>
+    <div id="mastery-section" class="section mastery__container">
+      <h1 class="mastery__h1">Mastery in Beer</h1>
+      <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      </p>
+      <div class="mastery__img-container mastery__img-container--top">
+        <h2 class="mastery__h2">Devilish
+          <span class="mastery__h2--red">Passion</span>
         </h2>
-        <div class="instagram-section__img-box">
-          <div class="hvr-grow-rotate instagram-section__img-container">
-            <a href="https://www.instagram.com/p/Bd-eU--AsPt/?taken-by=duvel_belgium">
-              <img src="img/insta_1.jpg" class="instagram-section__img" alt="instagram feed #1">
-            </a>
-          </div>
-          <div class="hvr-grow-rotate instagram-section__img-container">
-            <a href="https://www.instagram.com/p/BdVTqCPgxiE/?taken-by=duvel_belgium">
-              <img src="img/insta_2.jpg" class="instagram-section__img" alt="instagram feed #2">
-            </a>
-          </div>
-          <div class="hvr-grow-rotate instagram-section__img-container">
-            <a href="https://www.instagram.com/p/BdSh8_CgpvJ/?taken-by=duvel_belgium">
-              <img src="img/insta_3.jpg" class="instagram-section__img" alt="instagram feed #3">
-            </a>
-          </div>
-          <div class="hvr-grow-rotate instagram-section__img-container">
-            <a href="https://www.instagram.com/p/BdDaz2DgwYk/?taken-by=duvel_belgium">
-              <img src="img/insta_4.jpg" class="instagram-section__img" alt="instagram feed #4">
-            </a>
-          </div>
-          <div class="hvr-grow-rotate instagram-section__img-container">
-            <a href="https://www.instagram.com/p/BcespHdA_L7/?taken-by=duvel_belgium">
-              <img src="img/insta_5.jpg" class="instagram-section__img" alt="instagram feed #5">
-            </a>
-          </div>
+        <p>Placeholder text goes here.</p>
+        <img src="img/illustration_passion.png" class="mastery__img" alt="devilish passion">
+        <div class="mastery__btn-container">
+          <button class="hvr-forward mastery__btn">More →</button>
         </div>
       </div>
-
-      <div class="footer-section section">
-        <div class="footer__logo">
-          <img class="navi__logo" src="img/duvel_logo_2.png" alt="duvel footer logo">
+      <div class="mastery__img-container mastery__img-container--right">
+        <h2 class="mastery__h2">Devilish
+          <span class="mastery__h2--red">Tenacity</span>
+        </h2>
+        <p>Placeholder text goes here.</p>
+        <img src="img/illustration_tenacity.png" class="mastery__img" alt="devilish tenacity">
+        <div class="mastery__btn-container">
+          <button class="hvr-forward mastery__btn">More →</button>
         </div>
-        <div class="footer__copyright">
-          Copyright Duvel Moortgat
+      </div>
+      <div class="mastery__img-container mastery__img-container--left">
+        <h2 class="mastery__h2">Heavenly
+          <span class="mastery__h2--red">Pioneering</span>
+        </h2>
+        <p>Placeholder text goes here.</p>
+        <img src="img/illustration_pioneering.png" class="mastery__img" alt="heavenly pioneering">
+        <div class="mastery__btn-container">
+          <button class="hvr-forward mastery__btn">More →</button>
+        </div>
+      </div>
+      <div class="lines-container lines-container--left">
+        <img class="lines-img" src="img/lines_left.png" alt="left detail">
+      </div>
+      <div class="mastery__img-container mastery__img-container--right">
+        <h2 class="mastery__h2">Heavenly
+          <span class="mastery__h2--red">Patience</span>
+        </h2>
+        <p>Placeholder text goes here.</p>
+        <img src="img/illustration_patience.png" class="mastery__img" alt="heavenly patience">
+        <div class="mastery__btn-container">
+          <button class="hvr-forward hvr-forward mastery__btn">More →</button>
+        </div>
+      </div>
+      <div class="mastery__img-container mastery__img-container--left">
+        <h2 class="mastery__h2">Heavenly
+          <span class="mastery__h2--red">Ritual</span>
+        </h2>
+        <p>Placeholder text goes here.</p>
+        <img src="img/illustration_ritual.png" class="mastery__img" alt="heavenly ritual">
+        <div class="mastery__btn-container">
+          <button class="hvr-forward mastery__btn">More →</button>
+        </div>
+      </div>
+      <div class="mastery__img-container mastery__img-container--right">
+        <h2 class="mastery__h2">Devilish
+          <span class="mastery__h2--red">Details</span>
+        </h2>
+        <p>Placeholder text goes here.</p>
+        <img src="img/illustration_details.png" class="mastery__img" alt="devilish details">
+        <div class="mastery__btn-container">
+          <button class="hvr-forward mastery__btn">More →</button>
         </div>
       </div>
     </div>
-  
-    <script src="scripts/app.js" defer></script>
+    <div class="lines-container lines-container--right">
+      <img class="lines-img" src="img/lines_right.png" alt="right detail">
+    </div>
 
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <!-- <script>
+    <!-- Since 1871 Section -->
+    <span id="since-1871" class="anchor"></span>
+    <div id="since-section" class="section since-section">
+      <div class="since__video-container-container">
+        <div class="since__video-container">
+          <iframe width="560" height="315" class="since__video" src="https://www.youtube.com/embed/Me92JY0QCvA?rel=0&amp;showinfo=0"
+            frameborder="0" allow="encrypted-media" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instagram Section -->
+    <div class="instagram-section section">
+      <h2>
+        <i class="fa fa-instagram"></i> @Duvel_Belgium
+      </h2>
+      <div class="instagram-section__img-box">
+        <div class="hvr-grow-rotate instagram-section__img-container">
+          <a href="https://www.instagram.com/p/Bd-eU--AsPt/?taken-by=duvel_belgium">
+            <img src="img/insta_1.jpg" class="instagram-section__img" alt="instagram feed #1">
+          </a>
+        </div>
+        <div class="hvr-grow-rotate instagram-section__img-container">
+          <a href="https://www.instagram.com/p/BdVTqCPgxiE/?taken-by=duvel_belgium">
+            <img src="img/insta_2.jpg" class="instagram-section__img" alt="instagram feed #2">
+          </a>
+        </div>
+        <div class="hvr-grow-rotate instagram-section__img-container">
+          <a href="https://www.instagram.com/p/BdSh8_CgpvJ/?taken-by=duvel_belgium">
+            <img src="img/insta_3.jpg" class="instagram-section__img" alt="instagram feed #3">
+          </a>
+        </div>
+        <div class="hvr-grow-rotate instagram-section__img-container">
+          <a href="https://www.instagram.com/p/BdDaz2DgwYk/?taken-by=duvel_belgium">
+            <img src="img/insta_4.jpg" class="instagram-section__img" alt="instagram feed #4">
+          </a>
+        </div>
+        <div class="hvr-grow-rotate instagram-section__img-container">
+          <a href="https://www.instagram.com/p/BcespHdA_L7/?taken-by=duvel_belgium">
+            <img src="img/insta_5.jpg" class="instagram-section__img" alt="instagram feed #5">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-section section">
+      <div class="footer__logo">
+        <img class="navi__logo" src="img/duvel_logo_2.png" alt="duvel footer logo">
+      </div>
+      <div class="footer__copyright">
+        Copyright Duvel Moortgat
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/app.js" defer></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <!-- <script>
     window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
     ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async defer></script> -->
-  </body>  
+</body>
+
 </html>

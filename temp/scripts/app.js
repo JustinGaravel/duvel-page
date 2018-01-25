@@ -1,6 +1,18 @@
-'use strict';
+"use strict";
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+var _typeof =
+  typeof Symbol === "function" && typeof Symbol.iterator === "symbol"
+    ? function(obj) {
+        return typeof obj;
+      }
+    : function(obj) {
+        return obj &&
+          typeof Symbol === "function" &&
+          obj.constructor === Symbol &&
+          obj !== Symbol.prototype
+          ? "symbol"
+          : typeof obj;
+      };
 
 /* Run after pageload */
 document.onload = toggleHover();
@@ -12,35 +24,35 @@ document.onload = toggleHover();
 /* helper functions to scroll to correct point in page due to sticky header offset */
 
 function toTheBeer() {
-  document.querySelector('#the-beer').scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
+  document.querySelector("#the-beer").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
   });
-};
+}
 
 function toCelebratingMastery() {
-  document.querySelector('#celebrating-mastery').scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
+  document.querySelector("#celebrating-mastery").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
   });
-};
+}
 
 function toSince1871() {
-  document.querySelector('#since-1871').scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
+  document.querySelector("#since-1871").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
   });
-};
+}
 
 /* removes the hover effect on the instagram photos on tablet(or smaller) because they look silly */
 function toggleHover(e) {
   var elems = document.querySelectorAll(".instagram-section__img-container");
   if (window.innerWidth < 900) {
-    [].forEach.call(elems, function (el) {
+    [].forEach.call(elems, function(el) {
       el.classList.remove("hvr-grow-rotate");
     });
   } else {
-    [].forEach.call(elems, function (el) {
+    [].forEach.call(elems, function(el) {
       el.classList.add("hvr-grow-rotate");
     });
   }
@@ -54,8 +66,8 @@ window.addEventListener("resize", toggleHover);
 
 /* polyfill needed for smooth scrolling in safari */
 /* smoothscroll v0.4.0 - 2017 - Dustan Kasten, Jeremias Menichelli - MIT License */
-(function () {
-  'use strict';
+(function() {
+  "use strict";
 
   /*
    * aliases
@@ -73,15 +85,18 @@ window.addEventListener("resize", toggleHover);
    * @returns {Boolean}
    */
   function isMicrosoftBrowser(userAgent) {
-    var userAgentPatterns = ['MSIE ', 'Trident/', 'Edge/'];
+    var userAgentPatterns = ["MSIE ", "Trident/", "Edge/"];
 
-    return new RegExp(userAgentPatterns.join('|')).test(userAgent);
+    return new RegExp(userAgentPatterns.join("|")).test(userAgent);
   }
 
   // polyfill
   function polyfill() {
     // return if scroll behavior is supported and polyfill is not forced
-    if ('scrollBehavior' in d.documentElement.style && w.__forceSmoothScrollPolyfill__ !== true) {
+    if (
+      "scrollBehavior" in d.documentElement.style &&
+      w.__forceSmoothScrollPolyfill__ !== true
+    ) {
       return;
     }
 
@@ -105,7 +120,10 @@ window.addEventListener("resize", toggleHover);
     };
 
     // define timing method
-    var now = w.performance && w.performance.now ? w.performance.now.bind(w.performance) : Date.now;
+    var now =
+      w.performance && w.performance.now
+        ? w.performance.now.bind(w.performance)
+        : Date.now;
 
     /**
      * changes scroll position inside an element
@@ -136,19 +154,34 @@ window.addEventListener("resize", toggleHover);
      * @returns {Boolean}
      */
     function shouldBailOut(firstArg) {
-      if (firstArg === null || (typeof firstArg === 'undefined' ? 'undefined' : _typeof(firstArg)) !== 'object' || firstArg.behavior === undefined || firstArg.behavior === 'auto' || firstArg.behavior === 'instant') {
+      if (
+        firstArg === null ||
+        (typeof firstArg === "undefined" ? "undefined" : _typeof(firstArg)) !==
+          "object" ||
+        firstArg.behavior === undefined ||
+        firstArg.behavior === "auto" ||
+        firstArg.behavior === "instant"
+      ) {
         // first argument is not an object/null
         // or behavior is auto, instant or undefined
         return true;
       }
 
-      if ((typeof firstArg === 'undefined' ? 'undefined' : _typeof(firstArg)) === 'object' && firstArg.behavior === 'smooth') {
+      if (
+        (typeof firstArg === "undefined" ? "undefined" : _typeof(firstArg)) ===
+          "object" &&
+        firstArg.behavior === "smooth"
+      ) {
         // first argument is an object and behavior is smooth
         return false;
       }
 
       // throw error when behavior is not supported
-      throw new TypeError('behavior member of ScrollOptions ' + firstArg.behavior + ' is not a valid value for enumeration ScrollBehavior.');
+      throw new TypeError(
+        "behavior member of ScrollOptions " +
+          firstArg.behavior +
+          " is not a valid value for enumeration ScrollBehavior."
+      );
     }
 
     /**
@@ -159,11 +192,11 @@ window.addEventListener("resize", toggleHover);
      * @returns {Boolean}
      */
     function hasScrollableSpace(el, axis) {
-      if (axis === 'Y') {
+      if (axis === "Y") {
         return el.clientHeight + ROUNDING_TOLERANCE < el.scrollHeight;
       }
 
-      if (axis === 'X') {
+      if (axis === "X") {
         return el.clientWidth + ROUNDING_TOLERANCE < el.scrollWidth;
       }
     }
@@ -176,9 +209,9 @@ window.addEventListener("resize", toggleHover);
      * @returns {Boolean}
      */
     function canOverflow(el, axis) {
-      var overflowValue = w.getComputedStyle(el, null)['overflow' + axis];
+      var overflowValue = w.getComputedStyle(el, null)["overflow" + axis];
 
-      return overflowValue === 'auto' || overflowValue === 'scroll';
+      return overflowValue === "auto" || overflowValue === "scroll";
     }
 
     /**
@@ -189,8 +222,8 @@ window.addEventListener("resize", toggleHover);
      * @returns {Boolean}
      */
     function isScrollable(el) {
-      var isScrollableY = hasScrollableSpace(el, 'Y') && canOverflow(el, 'Y');
-      var isScrollableX = hasScrollableSpace(el, 'X') && canOverflow(el, 'X');
+      var isScrollableY = hasScrollableSpace(el, "Y") && canOverflow(el, "Y");
+      var isScrollableX = hasScrollableSpace(el, "X") && canOverflow(el, "X");
 
       return isScrollableY || isScrollableX;
     }
@@ -287,7 +320,7 @@ window.addEventListener("resize", toggleHover);
 
     // ORIGINAL METHODS OVERRIDES
     // w.scroll and w.scrollTo
-    w.scroll = w.scrollTo = function () {
+    w.scroll = w.scrollTo = function() {
       // avoid action when no arguments are passed
       if (arguments[0] === undefined) {
         return;
@@ -295,19 +328,39 @@ window.addEventListener("resize", toggleHover);
 
       // avoid smooth behavior if not required
       if (shouldBailOut(arguments[0]) === true) {
-        original.scroll.call(w, arguments[0].left !== undefined ? arguments[0].left : _typeof(arguments[0]) !== 'object' ? arguments[0] : w.scrollX || w.pageXOffset,
-        // use top prop, second argument if present or fallback to scrollY
-        arguments[0].top !== undefined ? arguments[0].top : arguments[1] !== undefined ? arguments[1] : w.scrollY || w.pageYOffset);
+        original.scroll.call(
+          w,
+          arguments[0].left !== undefined
+            ? arguments[0].left
+            : _typeof(arguments[0]) !== "object"
+              ? arguments[0]
+              : w.scrollX || w.pageXOffset,
+          // use top prop, second argument if present or fallback to scrollY
+          arguments[0].top !== undefined
+            ? arguments[0].top
+            : arguments[1] !== undefined
+              ? arguments[1]
+              : w.scrollY || w.pageYOffset
+        );
 
         return;
       }
 
       // LET THE SMOOTHNESS BEGIN!
-      smoothScroll.call(w, d.body, arguments[0].left !== undefined ? ~~arguments[0].left : w.scrollX || w.pageXOffset, arguments[0].top !== undefined ? ~~arguments[0].top : w.scrollY || w.pageYOffset);
+      smoothScroll.call(
+        w,
+        d.body,
+        arguments[0].left !== undefined
+          ? ~~arguments[0].left
+          : w.scrollX || w.pageXOffset,
+        arguments[0].top !== undefined
+          ? ~~arguments[0].top
+          : w.scrollY || w.pageYOffset
+      );
     };
 
     // w.scrollBy
-    w.scrollBy = function () {
+    w.scrollBy = function() {
       // avoid action when no arguments are passed
       if (arguments[0] === undefined) {
         return;
@@ -315,17 +368,30 @@ window.addEventListener("resize", toggleHover);
 
       // avoid smooth behavior if not required
       if (shouldBailOut(arguments[0])) {
-        original.scrollBy.call(w, arguments[0].left !== undefined ? arguments[0].left : _typeof(arguments[0]) !== 'object' ? arguments[0] : 0, arguments[0].top !== undefined ? arguments[0].top : arguments[1] !== undefined ? arguments[1] : 0);
+        original.scrollBy.call(
+          w,
+          arguments[0].left !== undefined
+            ? arguments[0].left
+            : _typeof(arguments[0]) !== "object" ? arguments[0] : 0,
+          arguments[0].top !== undefined
+            ? arguments[0].top
+            : arguments[1] !== undefined ? arguments[1] : 0
+        );
 
         return;
       }
 
       // LET THE SMOOTHNESS BEGIN!
-      smoothScroll.call(w, d.body, ~~arguments[0].left + (w.scrollX || w.pageXOffset), ~~arguments[0].top + (w.scrollY || w.pageYOffset));
+      smoothScroll.call(
+        w,
+        d.body,
+        ~~arguments[0].left + (w.scrollX || w.pageXOffset),
+        ~~arguments[0].top + (w.scrollY || w.pageYOffset)
+      );
     };
 
     // Element.prototype.scroll and Element.prototype.scrollTo
-    Element.prototype.scroll = Element.prototype.scrollTo = function () {
+    Element.prototype.scroll = Element.prototype.scrollTo = function() {
       // avoid action when no arguments are passed
       if (arguments[0] === undefined) {
         return;
@@ -334,15 +400,23 @@ window.addEventListener("resize", toggleHover);
       // avoid smooth behavior if not required
       if (shouldBailOut(arguments[0]) === true) {
         // if one number is passed, throw error to match Firefox implementation
-        if (typeof arguments[0] === 'number' && arguments[1] === undefined) {
-          throw new SyntaxError('Value couldn\'t be converted');
+        if (typeof arguments[0] === "number" && arguments[1] === undefined) {
+          throw new SyntaxError("Value couldn't be converted");
         }
 
-        original.elementScroll.call(this,
-        // use left prop, first number argument or fallback to scrollLeft
-        arguments[0].left !== undefined ? ~~arguments[0].left : _typeof(arguments[0]) !== 'object' ? ~~arguments[0] : this.scrollLeft,
-        // use top prop, second argument or fallback to scrollTop
-        arguments[0].top !== undefined ? ~~arguments[0].top : arguments[1] !== undefined ? ~~arguments[1] : this.scrollTop);
+        original.elementScroll.call(
+          this,
+          // use left prop, first number argument or fallback to scrollLeft
+          arguments[0].left !== undefined
+            ? ~~arguments[0].left
+            : _typeof(arguments[0]) !== "object"
+              ? ~~arguments[0]
+              : this.scrollLeft,
+          // use top prop, second argument or fallback to scrollTop
+          arguments[0].top !== undefined
+            ? ~~arguments[0].top
+            : arguments[1] !== undefined ? ~~arguments[1] : this.scrollTop
+        );
 
         return;
       }
@@ -351,11 +425,16 @@ window.addEventListener("resize", toggleHover);
       var top = arguments[0].top;
 
       // LET THE SMOOTHNESS BEGIN!
-      smoothScroll.call(this, this, typeof left === 'undefined' ? this.scrollLeft : ~~left, typeof top === 'undefined' ? this.scrollTop : ~~top);
+      smoothScroll.call(
+        this,
+        this,
+        typeof left === "undefined" ? this.scrollLeft : ~~left,
+        typeof top === "undefined" ? this.scrollTop : ~~top
+      );
     };
 
     // Element.prototype.scrollBy
-    Element.prototype.scrollBy = function () {
+    Element.prototype.scrollBy = function() {
       // avoid action when no arguments are passed
       if (arguments[0] === undefined) {
         return;
@@ -363,7 +442,15 @@ window.addEventListener("resize", toggleHover);
 
       // avoid smooth behavior if not required
       if (shouldBailOut(arguments[0]) === true) {
-        original.elementScroll.call(this, arguments[0].left !== undefined ? ~~arguments[0].left + this.scrollLeft : ~~arguments[0] + this.scrollLeft, arguments[0].top !== undefined ? ~~arguments[0].top + this.scrollTop : ~~arguments[1] + this.scrollTop);
+        original.elementScroll.call(
+          this,
+          arguments[0].left !== undefined
+            ? ~~arguments[0].left + this.scrollLeft
+            : ~~arguments[0] + this.scrollLeft,
+          arguments[0].top !== undefined
+            ? ~~arguments[0].top + this.scrollTop
+            : ~~arguments[1] + this.scrollTop
+        );
 
         return;
       }
@@ -376,10 +463,13 @@ window.addEventListener("resize", toggleHover);
     };
 
     // Element.prototype.scrollIntoView
-    Element.prototype.scrollIntoView = function () {
+    Element.prototype.scrollIntoView = function() {
       // avoid smooth behavior if not required
       if (shouldBailOut(arguments[0]) === true) {
-        original.scrollIntoView.call(this, arguments[0] === undefined ? true : arguments[0]);
+        original.scrollIntoView.call(
+          this,
+          arguments[0] === undefined ? true : arguments[0]
+        );
 
         return;
       }
@@ -391,14 +481,19 @@ window.addEventListener("resize", toggleHover);
 
       if (scrollableParent !== d.body) {
         // reveal element inside parent
-        smoothScroll.call(this, scrollableParent, scrollableParent.scrollLeft + clientRects.left - parentRects.left, scrollableParent.scrollTop + clientRects.top - parentRects.top);
+        smoothScroll.call(
+          this,
+          scrollableParent,
+          scrollableParent.scrollLeft + clientRects.left - parentRects.left,
+          scrollableParent.scrollTop + clientRects.top - parentRects.top
+        );
 
         // reveal parent in viewport unless is fixed
-        if (w.getComputedStyle(scrollableParent).position !== 'fixed') {
+        if (w.getComputedStyle(scrollableParent).position !== "fixed") {
           w.scrollBy({
             left: parentRects.left,
             top: parentRects.top,
-            behavior: 'smooth'
+            behavior: "smooth"
           });
         }
       } else {
@@ -406,13 +501,16 @@ window.addEventListener("resize", toggleHover);
         w.scrollBy({
           left: clientRects.left,
           top: clientRects.top,
-          behavior: 'smooth'
+          behavior: "smooth"
         });
       }
     };
   }
 
-  if ((typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) === 'object') {
+  if (
+    (typeof exports === "undefined" ? "undefined" : _typeof(exports)) ===
+    "object"
+  ) {
     // commonjs
     module.exports = { polyfill: polyfill };
   } else {

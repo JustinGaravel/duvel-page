@@ -18,7 +18,7 @@ html {
   text-shadow: none;
 }
 
-a { 
+a {
   font-size: 1.5rem;
 }
 
@@ -26,18 +26,37 @@ a:hover {
   text-decoration: #999;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $duvel-red;
   text-transform: uppercase;
 }
 
-p { font-size: 1.6rem; }
-h1 { font-size: 4.2rem; }
-h2 { font-size: 3.4rem; }
-h3 { font-size: 2.8rem; }
-h4 { font-size: 2.2rem; }
-h5 { font-size: 1.6rem; }
-h6 { font-size: 1rem; }  
+p {
+  font-size: 1.6rem;
+}
+h1 {
+  font-size: 4.2rem;
+}
+h2 {
+  font-size: 3.4rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+h4 {
+  font-size: 2.2rem;
+}
+h5 {
+  font-size: 1.6rem;
+}
+h6 {
+  font-size: 1rem;
+}
 
 /* Mobile Fonts */
 @media (max-width: $mobile-breakpoint) {
@@ -45,11 +64,11 @@ h6 { font-size: 1rem; }
     font-size: 3.2rem;
     margin: 0;
   }
-  
+
   h2 {
     font-size: 2.6rem;
     margin: 0;
-    }
+  }
 }
 
 /* Used to properly offset anchor links when using sticky header */
@@ -86,7 +105,6 @@ img {
 .lines-container img {
   width: 6vw;
 }
-
 
 /* Mobile Styling */
 @media (max-width: $mobile-breakpoint) {
@@ -171,7 +189,9 @@ img {
   -webkit-transition-property: transform;
   transition-property: transform;
 }
-.hvr-forward:hover, .hvr-forward:focus, .hvr-forward:active {
+.hvr-forward:hover,
+.hvr-forward:focus,
+.hvr-forward:active {
   -webkit-transform: translateX(8px);
   transform: translateX(8px);
 }
@@ -188,11 +208,12 @@ img {
   -webkit-transition-property: transform;
   transition-property: transform;
 }
-.hvr-grow-rotate:hover, .hvr-grow-rotate:focus, .hvr-grow-rotate:active {
+.hvr-grow-rotate:hover,
+.hvr-grow-rotate:focus,
+.hvr-grow-rotate:active {
   -webkit-transform: scale(1.1) rotate(4deg);
   transform: scale(1.1) rotate(4deg);
 }
-
 
 /* Underline From Center */
 .hvr-underline-from-center {
@@ -220,7 +241,9 @@ img {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+.hvr-underline-from-center:hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
   left: 0;
   right: 0;
 }
