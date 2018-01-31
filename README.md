@@ -1,4 +1,6 @@
-# Trainspot HTML Integration Test - Duvel Page
+# A Weekend Project - Duvel Page
+
+A demo page for a hypothetical new beer. This page was created for a test where I had a weekend to get it done.
 
 ## Usage
 
