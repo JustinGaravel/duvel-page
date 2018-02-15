@@ -1,6 +1,6 @@
 # A Weekend Project - Duvel Page
 
-A demo page for a hypothetical new beer. This page was created for a test where I had a weekend to get it done.
+A demo page for a hypothetical new beer. This page was created for a test where I had a weekend to get it done. It can be viewed [here](http://duvelproject-hosting-mobilehub-1893700403.s3-website-ap-northeast-1.amazonaws.com/).
 
 ## Usage
 

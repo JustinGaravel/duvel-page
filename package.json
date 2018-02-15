@@ -7,7 +7,9 @@
   "scripts": {
     "build": "gulp build",
     "sass": "gulp sass",
-    "serve": "gulp serve"
+    "serve": "gulp serve",
+    "deploy":
+      "aws s3 cp prod s3://duvelproject-hosting-mobilehub-1893700403 --recursive --acl public-read"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
